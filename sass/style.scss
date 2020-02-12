@@ -14,10 +14,12 @@
     padding: 39px 140px 19px 100px;
     display: flex;
     flex-direction: row;
+
     .logo {
         height: 64px;
         width: 102.6px;
     }
+
     .prueba {
         display: flex;
         flex-direction: row;
@@ -33,6 +35,7 @@
         width: 144px;
         height: 36px;
         border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
     span {
@@ -43,6 +46,7 @@
         text-align: center;
         display: inline-block;
     }
+
     .dropbtn {
         margin: 0 0 0 16px;
         padding: 9px 26.5px;
@@ -50,6 +54,18 @@
         width: 144px;
         height: 36px;
         border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    }
+
+    .arrow{
+
+
+        width: 36px;
+        height: 36px;
+        background: #F7C9F3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
     }
 
     .title {
@@ -58,6 +74,7 @@
     }
 
 }
+
 .search_gifs {
 
     padding: 0 140px 64px 100px;
@@ -65,37 +82,49 @@
     #searchbox {
         width: 1200px;
         height: 99px;
+
+        padding: 37px 12px 12px 15px;
+
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+       
     }
+
     .title_search {
 
-        font-size: 14px;
+        /*            font-size: 14px;
         background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-        height: 24px
-    }
-    #search {
-        padding: 15px;
-        background: #B4B4B4;
-        background-color: #eaf8fc;
-        background-image: linear-gradient(#fff, #d4e8ec);
-        border-radius: 35px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #c4d9df #a4c3ca #83afb7;
-        width: 500px;
-        height: 35px;
-        padding: 10px;
-        margin: 100px auto 50px;
-        overflow: hidden; 
+        height: 24px;*/
+
     }
 
-    input[type=search] {
+    .search {
 
-        background: white;
-        border: #B4B4B4;
-        border:12px;
-        width: 1057px;
         height: 48px;
-        color:#B4B4B4;
+        padding: 13px 0 13px 16px;
+    }
+
+    .bar {
+        width: 1057px;
 
     }
+
+    .search-btn {
+
+        height: 36px;
+        width: 102px;
+
+        font-size: 16px;
+        color: #B4B4B4;
+        letter-spacing: 0;
+        line-height: 18px;
+
+        padding: 0 0 0 8px;
+
+        background: #E6E6E6;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    }
+
+
 }
