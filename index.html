@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/6fa897ccd6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <title>Bienvenidos/as a Guifos.com!..... Donde los gifs estan ///////</title>
 </head>
@@ -29,12 +30,14 @@
                             <a href="#">Sailor Day</a>
                             <a href="#">Sailor night</a>
                         </div>-->
-                        
-                   </div>
-                   <a class="arrow"><span></span></a>
-                   <div class="title">Mis Guifos</div>
+
+                    </div>
+                    <button class="arrow"><a class="fas fa-sort-down"></a></button>
+
+
+                    <div class="title">Mis Guifos</div>
                 </div>
-                </div>
+            </div>
         </section>
 
 
@@ -45,45 +48,44 @@
 
         <section class="search_gifs">
             <div>
-
-                <div class="title_search">Buscar</div>
                 <form id="searchbox" action="">
-
-                   
-                    <input  class="search bar" type="text" placeholder="Busca gif, hashtgas, temas, busca lo que quieras...">
-
-                   <button class="search-btn" type="button">Buscar</button>
-                   
+                    <h1 class="title_search">Buscar</h1>
+                    <input class="search bar" type="text"
+                        placeholder="Busca gif, hashtas, temas, busca lo que quieras...">
+                    <button class="search-btn" type="button"> <img src="./assets/lupa_inactive.svg"
+                            alt="">Buscar</button>
+                    <img src="" alt="">
                 </form>
-
-
-
             </div>
-
         </section>
+
+
+
+
+
         <section class="advice">
-
-            <input type="text" id="fname" name="firstname" placeholder="Hoy te sugerimos:">
+            <input class="suggestion" type="text" id="fname" name="firstname" placeholder="Hoy te sugerimos:">
             <div class="card">
-                <div>Picachu<span class="close">x</span></div>
-                <img src="..." alt="...">
-
-                <button>Ver más...</button>
-
+               
+                    <div class="head_image">#Picachu<img  src="./assets/button3.svg" alt="" class="close"></div>
+                    <img src="./assets/picachu.jpg" alt="...">
+                    <button class="see_more">Ver más...</button>
+               
             </div>
-
         </section>
+
+
+
         <section class="tendencias">
 
 
-            <input type="text" id="fname" name="firstname" placeholder="Tendencias:">
+            <input class="suggestion" id="fname" name="firstname" placeholder="Tendencias:">
             <div class="card">
-                <div>Picachu<span class="close">x</span></div>
-                <img src="..." alt="...">
+             
+                <img src="./assets/charmander.jpg" alt="...">
 
             </div>
 
-            <button>Ver más...</button>
         </section>
     </div>
 </body>

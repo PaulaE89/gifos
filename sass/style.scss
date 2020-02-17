@@ -18,6 +18,7 @@
     .logo {
         height: 64px;
         width: 102.6px;
+    
     }
 
     .prueba {
@@ -29,7 +30,7 @@
     }
 
     .button_create {
-        margin: 0 0 0 685.4px;
+        margin: 0 0 0 650px;
         padding: 9px 26.5px;
         background: #F7C9F3;
         width: 144px;
@@ -40,7 +41,7 @@
 
     span {
         font-size: 16px;
-        width: 91px;
+        width: 84px;
         background: #F7C9F3;
         color: #110038;
         text-align: center;
@@ -57,15 +58,18 @@
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
-    .arrow{
-
-
-        width: 36px;
-        height: 36px;
+    .arrow {
+        width: 480px;
+        height: 37px;
         background: #F7C9F3;
         border: 1px solid #110038;
+        border-left: none;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    }
 
+    .fas {
+        background: #F7C9F3;
+        width: 10px;
     }
 
     .title {
@@ -82,48 +86,134 @@
     #searchbox {
         width: 1200px;
         height: 99px;
-
         padding: 37px 12px 12px 15px;
-
         background: #E6E6E6;
         box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-       
     }
 
     .title_search {
 
-        /*            font-size: 14px;
+        padding: 3px 0 3px 3px;
+        margin: -34px 0 12px -10px;
+        width: 1194px;
+        height: 24px;
         background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-        height: 24px;*/
-
+        font-size: 14px;
+        color: #FFFFFF;
+        font-family: ChakraPetch-Bold;
     }
 
     .search {
-
         height: 48px;
         padding: 13px 0 13px 16px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
     }
 
     .bar {
         width: 1057px;
-
     }
 
     .search-btn {
-
         height: 36px;
         width: 102px;
-
         font-size: 16px;
         color: #B4B4B4;
         letter-spacing: 0;
         line-height: 18px;
-
         padding: 0 0 0 8px;
-
         background: #E6E6E6;
         border: 1px solid #808080;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    }
+
+    img {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        background: #E6E6E6;
+    }
+}
+
+
+.advice {
+    height: 425px;
+    padding: 0 140px 68px 104px;
+
+    .suggestion {
+        width: 1200px;
+        height: 32px;
+        background: #FFFAFE;
+        border: 1px solid #E6BBE2;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+        padding: 7px 0 7px 7px;
+    }
+
+    .card {
+        width: 288px;
+        height: 313px;
+        margin: 16px 16px 0px 0px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    }
+
+    .head_image {
+        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        height: 24px;
+        width: 280px;
+        margin: 3px 4px 3px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .close {
+        justify-content: center;
+        height: 14px;
+        width: 16px;
+    }
+
+    img {
+        width: 280px;
+        height: 280px;
+        margin: 0 4px 3px 4px;
+    }
+
+
+    .see_more{
+        position:relative;
+        background: #4180F6;
+        border: 1px solid #4C2F99;
+        box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+        height: 34px;
+        width: 81px;
+        top: -50px;
+        margin-left: 11px;
+
+
+    }
+}
+.tendencias {
+
+    padding: 0 140px 68px 104px;
+
+    /*repetido*/
+
+    .suggestion {
+        width: 1200px;
+        height: 32px;
+        background: #FFFAFE;
+        border: 1px solid #E6BBE2;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+        padding: 7px 0 7px 7px;
+    }
+
+    .card{
+
+        width: 288px;
+        height: 298px;
+        padding:16px 14px 16px 0 ;
     }
 
 
