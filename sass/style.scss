@@ -1,5 +1,4 @@
 * {
-
     margin: 0;
     padding: 0;
     border: 0;
@@ -18,7 +17,7 @@
     .logo {
         height: 64px;
         width: 102.6px;
-    
+
     }
 
     .prueba {
@@ -33,31 +32,23 @@
         margin: 0 0 0 650px;
         padding: 9px 26.5px;
         background: #F7C9F3;
-        width: 144px;
+
         height: 36px;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-    }
 
-    span {
-        font-size: 16px;
-        width: 84px;
-        background: #F7C9F3;
-        color: #110038;
-        text-align: center;
-        display: inline-block;
+        /*doesnt work :( , how work this hover?*/
+        &:hover {
+            border: 1px solid #110038;
+        }
     }
 
 
-
-    .dropdown{
+    .dropdown {
         margin: 0 0 0 16px;
-
-
     }
 
     .dropbtn {
-     
         padding: 9px 26.5px;
         background: #F7C9F3;
         width: 144px;
@@ -66,45 +57,35 @@
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
-
-   
     .dropdown-content {
-        display: block;
+        display: none;
         position: absolute;
-      
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-
         width: 180px;
-        margin-top: 10px;
-      }
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    }
 
-
-      .dropdown-content a {
+    .myButton {
         float: none;
-        color: black;
+        color: #110038;
         padding: 10px;
         text-decoration: none;
         display: block;
         text-align: left;
-        background: #E6E6E6 ;
-        border-right: red;
-        border-color: green($color: #000000);
+        background: #FFF4FD;
+        border: 1px solid #CCA6C9;
+        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+        width: 150px;
+        height: 36px;
+        margin: 10px auto;
 
-     
-      }
-
-      
-
-
-
-
-
+    }
 
     .arrow {
         width: 480px;
-        height: 37px;
+        height: 36px;
         background: #F7C9F3;
         border: 1px solid #110038;
         border-left: none;
@@ -113,12 +94,16 @@
 
     .fas {
         background: #F7C9F3;
-        width: 10px;
+
     }
 
     .title {
-        padding: 0 0 0 16.5px;
+        padding: 0 0 1px 16.5px;
+        font-family: 'Chakra Petch', ;
         font-size: 16px;
+        color: #110038;
+        letter-spacing: 0;
+        line-height: 18px;
     }
 
 }
@@ -144,7 +129,8 @@
         background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
         font-size: 14px;
         color: #FFFFFF;
-        font-family: ChakraPetch-Bold;
+      
+        font-family: 'Chakra Petch', ;
     }
 
     .search {
@@ -170,6 +156,11 @@
         background: #E6E6E6;
         border: 1px solid #808080;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
+        
+
+
+
     }
 
     img {
@@ -178,8 +169,42 @@
         margin-right: 10px;
         background: #E6E6E6;
     }
-}
 
+
+    .search_result {
+        display: none;
+        position: absolute;
+        min-width: 1200px;
+        z-index: 1;
+        width: 1200px;
+        height: 160px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        padding: 17px 129px 5px 16px;
+
+    }
+
+    .button_search {
+
+        float: none;
+        color: #110038;
+        padding: 7px  0 7px  16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        background: #F0F0F0;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        width: 1055px;
+        height: 34px;
+        margin: 10px auto;
+        font-family: 'Chakra Petch', ;
+     
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+}
 
 .advice {
     height: 425px;
@@ -224,9 +249,8 @@
         margin: 0 4px 3px 4px;
     }
 
-
-    .see_more{
-        position:relative;
+    .see_more {
+        position: relative;
         background: #4180F6;
         border: 1px solid #4C2F99;
         box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
@@ -234,14 +258,12 @@
         width: 81px;
         top: -50px;
         margin-left: 11px;
-
-
     }
 }
+
 .tendencias {
 
     padding: 0 140px 68px 104px;
-
     /*repetido*/
 
     .suggestion {
@@ -253,12 +275,9 @@
         padding: 7px 0 7px 7px;
     }
 
-    .card{
-
+    .card {
         width: 288px;
         height: 298px;
-        padding:16px 14px 16px 0 ;
+        padding: 16px 14px 16px 0;
     }
-
-
 }

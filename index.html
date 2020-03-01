@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/6fa897ccd6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./css/style.css" />
     <title>Bienvenidos/as a Guifos.com!..... Donde los gifs estan ///////</title>
 </head>
@@ -19,71 +20,65 @@
                     <img src="./assets/gifOF_logo.png" alt="logo_gifos">
                 </div>
                 <div class="prueba">
-                    <a class="button_create"><span>Crear Guifos</span></a>
+                    <button class="button_create">Crear Guifos</button>
                     <div class="dropdown">
-                        <a class="dropbtn"> <span>Elegir tema
-                            </span>
-                        </a>
-                        
-                        <div class="dropdown-content">
-                            <a href="#">Sailor Day</a>
-                            <a href="#">Sailor night</a>
+                        <button class="dropbtn"  > Elegir tema
+
+                        </button>
+
+                        <div class="dropdown-content"  id="dropdown-content" >
+                            <a href="#" class="myButton">Sailor Day</a>
+                            <a href="#" class="myButton">Sailor night</a>
                         </div>
                     </div>
-                    <button class="arrow"><a class="fas fa-sort-down"></a></button>
+                    <button class="arrow fas fa-sort-down" id="arrow_dropdown"></button>
                     <div class="title">Mis Guifos</div>
                 </div>
             </div>
         </section>
-
-
-
-
-
-
 
         <section class="search_gifs">
             <div>
                 <form id="searchbox" action="">
                     <h1 class="title_search">Buscar</h1>
                     <input class="search bar" type="text"
-                        placeholder="Busca gif, hashtas, temas, busca lo que quieras...">
+                        placeholder="Busca gif, hashtas, temas, busca lo que quieras..." id="input_search_gifs">
                     <button class="search-btn" type="button"> <img src="./assets/lupa_inactive.svg"
                             alt="">Buscar</button>
                     <img src="" alt="">
                 </form>
+
+                <div class="search_result" id="show_result_gifs">
+
+                    <a href="#" class="button_search">Resultado de búsqueda sugerido</a>
+                    <a href="#" class="button_search">Un resultado similiar de busqueda</a>
+                    <a href="#" class="button_search">Y otro más</a>
+                </div>
             </div>
         </section>
-
-
-
-
-
         <section class="advice">
             <input class="suggestion" type="text" id="fname" name="firstname" placeholder="Hoy te sugerimos:">
             <div class="card">
-               
-                    <div class="head_image">#Picachu<img  src="./assets/button3.svg" alt="" class="close"></div>
-                    <img src="./assets/picachu.jpg" alt="...">
-                    <button class="see_more">Ver más...</button>
-               
+
+                <div class="head_image">#Picachu<img src="./assets/button3.svg" alt="" class="close"></div>
+                <img src="./assets/picachu.jpg" alt="...">
+                <button class="see_more">Ver más...</button>
+
             </div>
         </section>
 
-
-
         <section class="tendencias">
-
-
-            <input class="suggestion" id="fname" name="firstname" placeholder="Tendencias:">
+            <input class="suggestion" id="fname_2" name="firstname" placeholder="Tendencias:">
             <div class="card">
-             
                 <img src="./assets/charmander.jpg" alt="...">
 
             </div>
 
         </section>
     </div>
+
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
