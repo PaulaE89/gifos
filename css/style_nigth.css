@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box; }
+
+.create_gifs {
+  height: 115px;
+  padding: 39px 140px 19px 100px;
+  display: flex;
+  flex-direction: row; }
+  .create_gifs .logo {
+    height: 64px;
+    width: 102.6px; }
+  .create_gifs .prueba {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1088px; }
+  .create_gifs .button_create {
+    margin: 0 0 0 650px;
+    padding: 9px 26.5px;
+    height: 36px;
+    background: #EE3EFE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    /*doesnt work :( , how work this hover?*/ }
+    .create_gifs .button_create:hover {
+      border: 1px solid #110038; }
+  .create_gifs .dropdown {
+    margin: 0 0 0 16px; }
+  .create_gifs .dropbtn {
+    padding: 9px 26.5px;
+    width: 144px;
+    height: 36px;
+    background: #EE3EFE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF; }
+  .create_gifs .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    width: 180px;
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF; }
+  .create_gifs .myButton {
+    float: none;
+    color: #110038;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    width: 150px;
+    height: 36px;
+    margin: 10px auto; }
+  .create_gifs .arrow {
+    width: 480px;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    border-left: none;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_gifs .fas {
+    background: #EE3EFE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF; }
+  .create_gifs .title {
+    padding: 0 0 1px 16.5px;
+    font-family: "Chakra Petch";
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 18px; }
+
+.search_gifs {
+  padding: 0 140px 64px 100px; }
+  .search_gifs #searchbox {
+    width: 1200px;
+    height: 99px;
+    padding: 37px 12px 12px 15px;
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF; }
+  .search_gifs .title_search {
+    padding: 3px 0 3px 3px;
+    margin: -34px 0 12px -10px;
+    width: 1194px;
+    height: 24px;
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: "Chakra Petch"; }
+  .search_gifs .search {
+    height: 48px;
+    padding: 13px 0 13px 16px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000; }
+  .search_gifs .bar {
+    width: 1057px; }
+  .search_gifs .search-btn {
+    height: 36px;
+    width: 102px;
+    font-size: 16px;
+    color: #8F8F8F;
+    letter-spacing: 0;
+    line-height: 18px;
+    padding: 0 0 0 8px;
+    background: #B4B4B4;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
+  .search_gifs img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: #B4B4B4; }
+  .search_gifs .search_result {
+    display: none;
+    position: absolute;
+    min-width: 1200px;
+    z-index: 1;
+    width: 1200px;
+    height: 160px;
+    padding: 17px 129px 5px 16px;
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF; }
+  .search_gifs .button_search {
+    float: none;
+    color: #110038;
+    padding: 7px 0 7px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    width: 1055px;
+    height: 34px;
+    margin: 10px auto;
+    font-family: "Chakra Petch";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px; }
+
+.advice {
+  height: 425px;
+  padding: 0 140px 68px 104px; }
+  .advice .suggestion {
+    width: 1200px;
+    height: 32px;
+    padding: 7px 0 7px 7px;
+    background: #FFFAFE;
+    border: 1px solid #2E32FB;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038; }
+  .advice .card {
+    width: 288px;
+    height: 313px;
+    margin: 16px 16px 0px 0px;
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF; }
+  .advice .head_image {
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    height: 24px;
+    width: 280px;
+    margin: 3px 4px 3px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .advice .close {
+    justify-content: center;
+    height: 14px;
+    width: 16px; }
+  .advice img {
+    width: 280px;
+    height: 280px;
+    margin: 0 4px 3px 4px; }
+  .advice .see_more {
+    position: relative;
+    height: 34px;
+    width: 81px;
+    top: -50px;
+    margin-left: 11px;
+    background: #2E32FB;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF; }
+
+.tendencias {
+  padding: 0 140px 68px 104px;
+  /*repetido*/ }
+  .tendencias .suggestion {
+    width: 1200px;
+    height: 32px;
+    padding: 7px 0 7px 7px;
+    background: #FFFAFE;
+    border: 1px solid #2E32FB;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038; }
+  .tendencias .card {
+    width: 288px;
+    height: 298px;
+    padding: 16px 14px 16px 0; }
+
+/*# sourceMappingURL=style_nigth.css.map */
