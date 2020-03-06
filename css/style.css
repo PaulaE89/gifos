@@ -26,12 +26,21 @@
     background: #F7C9F3;
     height: 36px;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-    /*doesnt work :( , how work this hover?*/ }
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
     .create_gifs .button_create:hover {
-      border: 1px solid #110038; }
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
+    .create_gifs .button_create:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
   .create_gifs .dropdown {
     margin: 0 0 0 16px; }
+    .create_gifs .dropdown:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
+    .create_gifs .dropdown:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
   .create_gifs .dropbtn {
     padding: 9px 26.5px;
     background: #F7C9F3;
@@ -67,6 +76,12 @@
     border: 1px solid #110038;
     border-left: none;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+    .create_gifs .arrow:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
+    .create_gifs .arrow:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
   .create_gifs .fas {
     background: #F7C9F3; }
   .create_gifs .title {

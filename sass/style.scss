@@ -37,15 +37,39 @@
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 
-        /*doesnt work :( , how work this hover?*/
-        &:hover {
-            border: 1px solid #110038;
+        &:hover{
+
+       border: 1px dotted #110038;          
+            outline-offset: -4000px;
+        }
+
+
+        &:active{
+
+            
+       border: 1px dotted #110038;          
+       outline-offset: -4000px;
+
+
+
         }
     }
 
 
     .dropdown {
         margin: 0 0 0 16px;
+
+
+        &:hover{
+            border: 1px dotted #110038;          
+            outline-offset: -4000px;
+        }
+        &:active{
+           
+            border: 1px dotted #110038;          
+            outline-offset: -4000px;
+       
+             }
     }
 
     .dropbtn {
@@ -90,6 +114,16 @@
         border: 1px solid #110038;
         border-left: none;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        &:hover{
+            border: 1px dotted #110038;          
+            outline-offset: -4000px;
+        }
+        &:active{
+           
+            border: 1px dotted #110038;          
+            outline-offset: -4000px;
+   
+             }
     }
 
     .fas {
@@ -105,6 +139,8 @@
         letter-spacing: 0;
         line-height: 18px;
     }
+
+
 
 }
 
@@ -204,6 +240,10 @@
         letter-spacing: 0;
         line-height: 22px;
     }
+
+
+
+
 }
 
 .advice {
