@@ -69,6 +69,10 @@
     width: 150px;
     height: 36px;
     margin: 10px auto; }
+    .create_gifs .myButton:active {
+      background: #F0F0F0;
+      border: 1px solid #808080;
+      box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
   .create_gifs .arrow {
     width: 480px;
     height: 36px;
@@ -85,12 +89,21 @@
   .create_gifs .fas {
     background: #F7C9F3; }
   .create_gifs .title {
-    padding: 0 0 1px 16.5px;
+    margin: 0 0 1px 16.5px;
     font-family: "Chakra Petch";
     font-size: 16px;
     color: #110038;
     letter-spacing: 0;
-    line-height: 18px; }
+    line-height: 18px;
+    height: 32px;
+    /*check font `cause is differente now*/ }
+    .create_gifs .title:hover {
+      border: 1px dotted #110038; }
+    .create_gifs .title:active {
+      font-size: 16px;
+      color: #110038;
+      letter-spacing: 0;
+      line-height: 18px; }
 
 .search_gifs {
   padding: 0 140px 64px 100px; }
@@ -128,11 +141,22 @@
     background: #E6E6E6;
     border: 1px solid #808080;
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
+    .search_gifs .search-btn:active {
+      background: #F7C9F3;
+      border: 1px dotted #110038;
+      outline-offset: -4000px;
+      font-size: 16px;
+      color: #110038;
+      letter-spacing: 0; }
   .search_gifs img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
     background: #E6E6E6; }
+    .search_gifs img:active {
+      background: #F7C9F3;
+      color: #110038;
+      background-image: url("./assets/lupa.svg"); }
   .search_gifs .search_result {
     display: none;
     position: absolute;
@@ -160,6 +184,9 @@
     font-size: 16px;
     letter-spacing: 0;
     line-height: 22px; }
+    .search_gifs .button_search:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
 
 .advice {
   height: 425px;

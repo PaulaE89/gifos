@@ -12,7 +12,7 @@ var estilos=document.getElementById('estilos');
 
 function show_hide(){
 
-    if(click.style.display==="none"){
+    if(click.style.display==="none" ){
 
         click.style.display="block";
     }else{

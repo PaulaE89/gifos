@@ -105,6 +105,13 @@
         height: 36px;
         margin: 10px auto;
 
+
+        &:active{
+            background: #F0F0F0;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        }
+
     }
 
     .arrow {
@@ -132,13 +139,38 @@
     }
 
     .title {
-        padding: 0 0 1px 16.5px;
+        margin: 0 0 1px 16.5px;
         font-family: 'Chakra Petch', ;
         font-size: 16px;
         color: #110038;
         letter-spacing: 0;
         line-height: 18px;
+        height: 32px;
+        
+
+
+        &:hover{
+           
+            border: 1px dotted #110038;          
+          
+    
+             }
+
+
+             
+/*check font `cause is differente now*/
+        &:active{
+           
+            
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+line-height: 18px;          
+          
+    
+             }
     }
+ 
 
 
 
@@ -166,7 +198,10 @@
         font-size: 14px;
         color: #FFFFFF;
       
-        font-family: 'Chakra Petch', ;
+        font-family: 'Chakra Petch' ;
+
+       
+
     }
 
     .search {
@@ -193,6 +228,18 @@
         border: 1px solid #808080;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
+
+        &:active{
+          background:#F7C9F3 ;
+
+          border: 1px dotted #110038;          
+          outline-offset: -4000px;
+
+          font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+        }
+
         
 
 
@@ -204,6 +251,14 @@
         height: 16px;
         margin-right: 10px;
         background: #E6E6E6;
+
+        &:active{
+            background:#F7C9F3 ;
+            color: #110038;
+            background-image:url('./assets/lupa.svg');
+        }
+
+
     }
 
 
@@ -239,6 +294,15 @@
         font-size: 16px;
         letter-spacing: 0;
         line-height: 22px;
+
+
+        &:hover{
+            border: 1px dotted #110038;          
+            outline-offset: -4000px;
+        }
+
+
+        
     }
 
 
