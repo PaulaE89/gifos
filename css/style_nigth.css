@@ -3,7 +3,8 @@
   padding: 0;
   border: 0;
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: #130F38; }
 
 .create_gifs {
   height: 115px;

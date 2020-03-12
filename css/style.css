@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background: white;
+  background: #FCF3FD;
   width: 100%;
   box-sizing: border-box; }
 
@@ -97,6 +97,8 @@
     line-height: 18px;
     height: 32px;
     /*check font `cause is differente now*/ }
+    .create_gifs .title::first-letter {
+      text-decoration: underline; }
     .create_gifs .title:hover {
       border: 1px dotted #110038; }
     .create_gifs .title:active {
@@ -167,6 +169,8 @@
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     padding: 17px 129px 5px 16px; }
+  .search_gifs .show-list-gifs {
+    display: block; }
   .search_gifs .button_search {
     float: none;
     color: #110038;

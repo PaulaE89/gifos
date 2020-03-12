@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     border: 0;
-    background: white;
+    background: #FCF3FD;
     width: 100%;
     box-sizing: border-box;
+
+
 }
 
 .create_gifs {
@@ -147,6 +149,10 @@
         line-height: 18px;
         height: 32px;
         
+        &::first-letter{
+
+            text-decoration: underline;
+        }
 
 
         &:hover{
@@ -273,6 +279,12 @@ letter-spacing: 0;
         box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
         padding: 17px 129px 5px 16px;
 
+    }
+
+    .show-list-gifs{
+
+
+        display: block;
     }
 
     .button_search {

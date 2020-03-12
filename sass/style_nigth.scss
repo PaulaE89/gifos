@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     border: 0;
-
     width: 100%;
     box-sizing: border-box;
+
+    background: #130F38;
 }
 
 .create_gifs {
@@ -51,7 +52,6 @@
         padding: 9px 26.5px;
         width: 144px;
         height: 36px;
-
         background: #EE3EFE;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
@@ -63,9 +63,6 @@
         min-width: 160px;
         z-index: 1;
         width: 180px;
-
-
-
         background: #B4B4B4;
         box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
     }
