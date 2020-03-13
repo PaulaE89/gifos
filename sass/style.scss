@@ -39,18 +39,18 @@
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 
-        &:hover{
+        &:hover {
 
-       border: 1px dotted #110038;          
+            border: 1px dotted #110038;
             outline-offset: -4000px;
         }
 
 
-        &:active{
+        &:active {
 
-            
-       border: 1px dotted #110038;          
-       outline-offset: -4000px;
+
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
 
 
 
@@ -62,16 +62,17 @@
         margin: 0 0 0 16px;
 
 
-        &:hover{
-            border: 1px dotted #110038;          
+        &:hover {
+            border: 1px dotted #110038;
             outline-offset: -4000px;
         }
-        &:active{
-           
-            border: 1px dotted #110038;          
+
+        &:active {
+
+            border: 1px dotted #110038;
             outline-offset: -4000px;
-       
-             }
+
+        }
     }
 
     .dropbtn {
@@ -108,7 +109,7 @@
         margin: 10px auto;
 
 
-        &:active{
+        &:active {
             background: #F0F0F0;
             border: 1px solid #808080;
             box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -123,16 +124,18 @@
         border: 1px solid #110038;
         border-left: none;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-        &:hover{
-            border: 1px dotted #110038;          
+
+        &:hover {
+            border: 1px dotted #110038;
             outline-offset: -4000px;
         }
-        &:active{
-           
-            border: 1px dotted #110038;          
+
+        &:active {
+
+            border: 1px dotted #110038;
             outline-offset: -4000px;
-   
-             }
+
+        }
     }
 
     .fas {
@@ -148,35 +151,35 @@
         letter-spacing: 0;
         line-height: 18px;
         height: 32px;
-        
-        &::first-letter{
+
+        &::first-letter {
 
             text-decoration: underline;
         }
 
 
-        &:hover{
-           
-            border: 1px dotted #110038;          
-          
-    
-             }
+        &:hover {
+
+            border: 1px dotted #110038;
 
 
-             
-/*check font `cause is differente now*/
-        &:active{
-           
-            
-font-size: 16px;
-color: #110038;
-letter-spacing: 0;
-line-height: 18px;          
-          
-    
-             }
+        }
+
+
+
+        /*check font `cause is differente now*/
+        &:active {
+
+
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 18px;
+
+
+        }
     }
- 
+
 
 
 
@@ -203,10 +206,10 @@ line-height: 18px;
         background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
         font-size: 14px;
         color: #FFFFFF;
-      
-        font-family: 'Chakra Petch' ;
 
-       
+        font-family: 'Chakra Petch';
+
+
 
     }
 
@@ -235,18 +238,18 @@ line-height: 18px;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
 
-        &:active{
-          background:#F7C9F3 ;
+        &:active {
+            background: #F7C9F3;
 
-          border: 1px dotted #110038;          
-          outline-offset: -4000px;
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
 
-          font-size: 16px;
-color: #110038;
-letter-spacing: 0;
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
         }
 
-        
+
 
 
 
@@ -258,10 +261,10 @@ letter-spacing: 0;
         margin-right: 10px;
         background: #E6E6E6;
 
-        &:active{
-            background:#F7C9F3 ;
+        &:active {
+            background: #F7C9F3;
             color: #110038;
-            background-image:url('./assets/lupa.svg');
+            background-image: url('./assets/lupa.svg');
         }
 
 
@@ -281,7 +284,7 @@ letter-spacing: 0;
 
     }
 
-    .show-list-gifs{
+    .show-list-gifs {
 
 
         display: block;
@@ -291,7 +294,7 @@ letter-spacing: 0;
 
         float: none;
         color: #110038;
-        padding: 7px  0 7px  16px;
+        padding: 7px 0 7px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
@@ -302,19 +305,19 @@ letter-spacing: 0;
         height: 34px;
         margin: 10px auto;
         font-family: 'Chakra Petch', ;
-     
+
         font-size: 16px;
         letter-spacing: 0;
         line-height: 22px;
 
 
-        &:hover{
-            border: 1px dotted #110038;          
+        &:hover {
+            border: 1px dotted #110038;
             outline-offset: -4000px;
         }
 
 
-        
+
     }
 
 
@@ -363,6 +366,11 @@ letter-spacing: 0;
         width: 280px;
         height: 280px;
         margin: 0 4px 3px 4px;
+
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
     }
 
     .see_more {
@@ -374,6 +382,12 @@ letter-spacing: 0;
         width: 81px;
         top: -50px;
         margin-left: 11px;
+
+
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
     }
 }
 
@@ -395,7 +409,25 @@ letter-spacing: 0;
         width: 288px;
         height: 298px;
         padding: 16px 14px 16px 0;
+
+        &:hover {
+
+            width: 288px;
+            height: 313px;
+            margin: 16px 16px 0px 0px;
+            background: #E6E6E6;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+        }
+
+
     }
 
-    
+    img {
+/*revisar esas margenes malas*/
+        margin: -7px 8px 9px 8px;
+
+    }
+
+
 }
