@@ -8,6 +8,59 @@ var click= document.getElementById("dropdown-content");
 var show_result_gifs=document.getElementById("show_result_gifs");
 var estilos=document.getElementById('estilos');
 
+
+var first_image=document.querySelector("#first_image");
+
+var gifs=1;
+
+/*calling APIS'S GIFOS */
+
+
+fetch('http://api.giphy.com/v1/stickers/trending?api_key=pDbe98unNhbtcnfymALov2ljqZoF2Ztf&limit=' + gifs)
+.then((response)=>{
+
+    
+    return  response.json();;
+}).then((response)=>{
+
+    console.log(response);
+    
+
+    console.log("the first position" + ""  + "id" + " " + response.data[0].id);
+
+    console.log(response.data.length);
+    
+    var total_gifs=response.data.length;
+ 
+
+
+    for (var i=0; i< total_gifs;i++){
+
+    console.log("this is total gifs" + "  " +total_gifs);
+
+   var prueba= response.data[0].images.fixed_height_small_still.url;
+
+   first_image.src=prueba;
+    console.log(first_image);
+
+
+    }
+
+    
+    
+
+
+
+
+}).catch(error =>{
+
+    return error;
+});
+
+
+
+/**Other function */
+
 function show_hide(){
 
     if(click.style.display==="none" ){
