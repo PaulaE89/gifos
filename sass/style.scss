@@ -338,7 +338,19 @@
         padding: 7px 0 7px 7px;
     }
 
+
+    .all_cards{
+
+        display: flex;
+
+
+
+    }
     .card {
+
+        flex-direction: row;
+
+        
         width: 288px;
         height: 313px;
         margin: 16px 16px 0px 0px;

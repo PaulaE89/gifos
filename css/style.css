@@ -202,7 +202,10 @@
     border: 1px solid #E6BBE2;
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
     padding: 7px 0 7px 7px; }
+  .advice .all_cards {
+    display: flex; }
   .advice .card {
+    flex-direction: row;
     width: 288px;
     height: 313px;
     margin: 16px 16px 0px 0px;
