@@ -246,6 +246,8 @@
 .tendencias {
   padding: 0 140px 68px 104px;
   /*repetido*/ }
+  .tendencias .card_tendencias {
+    display: flex; }
   .tendencias .suggestion {
     width: 1200px;
     height: 32px;
@@ -256,7 +258,8 @@
   .tendencias .card {
     width: 288px;
     height: 298px;
-    padding: 16px 14px 16px 0; }
+    padding: 16px 14px 16px 0;
+    flex-direction: row; }
     .tendencias .card:hover {
       width: 288px;
       height: 313px;

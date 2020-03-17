@@ -8,13 +8,16 @@ var click= document.getElementById("dropdown-content");
 var show_result_gifs=document.getElementById("show_result_gifs");
 var estilos=document.getElementById('estilos');
 
+var tendencias_list=document.getElementById("tendencias");
+console.log(tendencias);
+
 
 var add_images=document.getElementsByClassName("add_image");
 
 var gifs=4;
 
 
-var tendencias=10;
+var tendencias_count=10;
 
 /*calling APIS'S GIFOS */
 
@@ -40,7 +43,7 @@ const found= fetch('http://api.giphy.com/v1/stickers/trending?api_key=pDbe98unNh
 
 function tendencias(){
 
-    const pruebafound= fetch('http://api.giphy.com/v1/stickers/trending?api_key=pDbe98unNhbtcnfymALov2ljqZoF2Ztf&limit=' + tendencias)
+    const pruebafound= fetch('http://api.giphy.com/v1/stickers/trending?api_key=pDbe98unNhbtcnfymALov2ljqZoF2Ztf&limit=' + tendencias_count)
     .then ((response)=>{
 
         return response.json();
@@ -49,28 +52,22 @@ function tendencias(){
 
  var total_gifs=response.data.length;
 
- for (var i=0; i<total_gifs;i++){
+ for (var i=0; i<tendencias_count;i++){
 
 
     const prueba=
 
-
-
     `<div class="card" data-id=${i}>
-    <img src="${response.data[i].images.fixed_height_small_still.url}" class="img-thumbnail thumb m-r" width="100" height="100">
+    <img src="${response.data[i].images.fixed_height_small_still.url}" class="img-thumbnail thumb m-r" >
     
     </div>`
 
 
     const html = document.implementation.createHTMLDocument();
     html.body.innerHTML = prueba;
-    image.append(html.body.children[0]);
+   tendencias_list.append(html.body.children[0]);
 
  }
-
-
-
-
 
     }).catch(error=>{
 
@@ -78,11 +75,6 @@ function tendencias(){
 
 
 }
-
-
-
-
-
 
 /**Other function */
 
@@ -125,5 +117,5 @@ function change_white(){
 }
 
 
-
 trending();
+tendencias();

@@ -408,6 +408,16 @@
     padding: 0 140px 68px 104px;
     /*repetido*/
 
+    .card_tendencias{
+
+
+        
+        display: flex;
+
+
+
+    }
+
     .suggestion {
         width: 1200px;
         height: 32px;
@@ -421,6 +431,7 @@
         width: 288px;
         height: 298px;
         padding: 16px 14px 16px 0;
+        flex-direction: row;
 
         &:hover {
 
