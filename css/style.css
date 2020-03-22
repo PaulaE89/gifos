@@ -245,9 +245,15 @@
 
 .tendencias {
   padding: 0 140px 68px 104px;
+  width: 1200px;
   /*repetido*/ }
   .tendencias .card_tendencias {
-    display: flex; }
+    /*display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 1200px; }
   .tendencias .suggestion {
     width: 1200px;
     height: 32px;
@@ -256,18 +262,19 @@
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
     padding: 7px 0 7px 7px; }
   .tendencias .card {
-    width: 288px;
-    height: 298px;
-    padding: 16px 14px 16px 0;
-    flex-direction: row; }
+    width: 294px;
+    height: 304px;
+    margin: 17px 16px 16px 0; }
     .tendencias .card:hover {
-      width: 288px;
+      width: 294px;
       height: 313px;
-      margin: 16px 16px 0px 0px;
+      /* margin: 16px 16px 0px 0px;*/
       background: #E6E6E6;
       box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
   .tendencias img {
     /*revisar esas margenes malas*/
-    margin: -7px 8px 9px 8px; }
+    width: 288px;
+    height: 298px;
+    margin: -9px 0 0 3px; }
 
 /*# sourceMappingURL=style.css.map */
