@@ -369,6 +369,8 @@
         justify-content: space-between;
     }
 
+   
+
     .close {
         justify-content: center;
         height: 14px;
@@ -379,7 +381,6 @@
         width: 280px;
         height: 280px;
         margin: 0 4px 3px 4px;
-
         &:hover {
             border: 1px dotted #110038;
             outline-offset: -4000px;
@@ -395,8 +396,6 @@
         width: 81px;
         top: -50px;
         margin-left: 11px;
-
-
         &:hover {
             border: 1px dotted #110038;
             outline-offset: -4000px;
@@ -408,20 +407,13 @@
 
     padding: 0 140px 68px 104px;
     width: 1200px;
-    /*repetido*/
+    
 
     .card_tendencias {
 
-
-
-        /*display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;*/
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         width: 1200px;
-
-
 
     }
 
@@ -434,38 +426,24 @@
         padding: 7px 0 7px 7px;
     }
 
-    .card {
+    .card_trending{
         width: 294px;
         height: 304px;
         margin: 17px 16px 16px 0;
 
-
-
         &:hover {
 
             width: 294px;
-            height: 313px;
-
-            /* margin: 16px 16px 0px 0px;*/
-
+            height: 304px;
             background: #E6E6E6;
             box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-
         }
-
-
-
     }
 
     img {
         /*revisar esas margenes malas*/
-
         width: 288px;
         height: 298px;
-        margin: -9px 0 0 3px;
-
-
+        margin: 5px 0 0 4px;
     }
-
-
 }
