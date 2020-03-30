@@ -11,6 +11,7 @@
 
 .create_gifs {
 
+    width: 1440px;    
     height: 115px;
     padding: 39px 140px 19px 100px;
     display: flex;
@@ -43,6 +44,7 @@
 
             border: 1px dotted #110038;
             outline-offset: -4000px;
+            background: #997D97;
         }
 
 
@@ -253,7 +255,13 @@
 
 
 
+
+
     }
+
+
+  
+
 
     img {
         width: 16px;
@@ -445,5 +453,11 @@
         width: 288px;
         height: 298px;
         margin: 5px 0 0 4px;
+    }
+
+    .empty_space p{
+
+        background-color: red;
+
     }
 }

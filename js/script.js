@@ -10,17 +10,23 @@ var estilos = document.getElementById('estilos');
 var tendencias_list = document.getElementById("tendencias");
 var add_images = document.getElementsByClassName("add_image");
 
+
 var button_search = document.getElementById("search-btn");
-
-
 
 var section = document.getElementById("advice");
 
 var trendings = document.getElementById("trendings");
 
+var head_image=document.getElementsByClassName("head_image");
 
 
-var gifs = 12;
+var all_cards=document.getElementsByClassName("all_cards");
+
+console.log(all_cards);
+
+
+
+var gifs = 8;
 var filter;
 
 /*calling APIS'S GIFOS */
@@ -34,19 +40,62 @@ function trending() {
             console.log(response);
             for (var i = 0; i < 4; i++) {
 
-                /**prueba */
+                /**prueba
 
                var prueba= document.createElement(id);
                console.log(prueba);
 
-              prueba.textContent = "Paragraph changed!";
-
                
+
+              prueba.textContent = "Paragraph changed!"; */
+
+
+              var name_title=response.data[i].title.split("Sticker")[0];
+        
+            
+                const cards_above=
+                `<div class="card">
+              <div class="head_image">${name_title}<img src="./assets/button3.svg" alt="" class="close"></div>
+              <img src="${response.data[i].images.original.url}" alt="..." class="add_image" >
+              <button class="see_more">Ver más...</button>
+          </div>`
+
+          const html = document.implementation.createHTMLDocument();
+          html.body.innerHTML = cards_above;
+          all_cards[0].append(html.body.children[0]);
+
+
+
+          /*revisar*/ 
+
+
+         var see_more_btn=document.querySelectorAll('.see_more');
+         var head_image=document.querySelectorAll('.head_image');
+         
+
+         console.log(see_more_btn);
+         console.log(head_image);
+         
+          see_more_btn.forEach( function (button,index){
+
+            button.addEventListener("click", function(){
+
+
+                console.log(head_image[index].textContent);
+
+                filter= head_image[index].textContent;
+
+                filter_search();
+
+            });
+            
             
 
-                add_images[i].src = response.data[i].images.original.url;
+          });
+
+
             }
-            /*prueba */
+            
             for (var i = 4; i < gifs; i++) {
                 const cards =
                     `<div class="card_trending" data-id=${i}>
@@ -78,23 +127,30 @@ function show_hide() {
 
 function search() {
 
-    input_search_gifs.addEventListener('keyup', (e) => {
+    /**hay que revisar  solo acepta enter en buscar, hay  q colocar enter */
+    button_search.addEventListener("click", function () {
 
-        var new_search = e.target.value;
-        filter = new_search;
-        
-        /**hay que revisar  solo acepta enter en buscar, hay  q colocar enter */
-        if (button_search.addEventListener("click", filter_search) || button_search.addEventListener("keydown", function (e) {
-                if (event.key === "enter") {
+        var new_search = input_search_gifs.value;
+        if (new_search.length == 0 || new_search == null) {
+            delete_information();
 
-                    console.log("poraqui");
-                    filter_search(new_search);
+            const empty =
+                `<div class="card_trending" data-id=${new_search.length} >
+                <p> YOU MUST WRITE SOMETHING </p>
+                 </div>`
+            const html = document.implementation.createHTMLDocument();
+            html.body.innerHTML = empty;
+            tendencias_list.append(html.body.children[0]);
 
-                }
-            }));
+        } else {
+            filter = new_search
+            filter_search();
+        }
     });
-}
 
+    var new_search = input_search_gifs.value;
+    filter = new_search;
+}
 
 function filter_search(e) {
 
@@ -102,12 +158,12 @@ function filter_search(e) {
         .then((response) => {
             return response.json();
         }).then((response) => {
+
             delete_information();
-            
             document.getElementsByName("trending_suggestion")[0].placeholder = filter;
-                      
+
             for (var i = 0; i < response.data.length; i++) {
-               
+
                 const cards =
                     `<div class="card_trending" data-id=${i}>
         <img src="${response.data[i].images.original.url}" class="img-thumbnail thumb m-r" >
@@ -115,13 +171,14 @@ function filter_search(e) {
                 const html = document.implementation.createHTMLDocument();
                 html.body.innerHTML = cards;
                 tendencias_list.append(html.body.children[0]);
-
             }
+        }).catch(error => {
+
+            return error;
         });
 }
 
 function delete_information() {
-   /* section.style.display = "none";*/
 
     var delete_element = document.querySelectorAll(".card_trending");
 
@@ -134,13 +191,20 @@ function show_search(e) {
 
     if (e.target.value.length > 2) {
         show_result_gifs.classList.add("show-list-gifs");
+        button_search.style.backgroundColor="#F7C9F3";
+        button_search.style.color="#110038 ";
         input_search_gifs.addEventListener('focusout', (event) => {
+
+            
             show_result_gifs.classList.remove("show-list-gifs");
         });
 
     } else {
 
         show_result_gifs.classList.remove("show-list-gifs");
+
+        button_search.style.backgroundColor="";
+        button_search.style.color="";
     }
 }
 
