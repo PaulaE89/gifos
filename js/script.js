@@ -22,7 +22,8 @@ var head_image=document.getElementsByClassName("head_image");
 
 var all_cards=document.getElementsByClassName("all_cards");
 
-console.log(all_cards);
+var my_gifs=document.getElementsByClassName("title");
+console.log(my_gifs);
 
 
 
@@ -40,19 +41,9 @@ function trending() {
             console.log(response);
             for (var i = 0; i < 4; i++) {
 
-                /**prueba
-
-               var prueba= document.createElement(id);
-               console.log(prueba);
-
                
-
-              prueba.textContent = "Paragraph changed!"; */
-
-
               var name_title=response.data[i].title.split("Sticker")[0];
-        
-            
+                   
                 const cards_above=
                 `<div class="card">
               <div class="head_image">${name_title}<img src="./assets/button3.svg" alt="" class="close"></div>
@@ -64,24 +55,15 @@ function trending() {
           html.body.innerHTML = cards_above;
           all_cards[0].append(html.body.children[0]);
 
-
-
-          /*revisar*/ 
-
+         /*revisar*/ 
 
          var see_more_btn=document.querySelectorAll('.see_more');
          var head_image=document.querySelectorAll('.head_image');
-         
-
-         console.log(see_more_btn);
-         console.log(head_image);
-         
+     
+        
           see_more_btn.forEach( function (button,index){
 
             button.addEventListener("click", function(){
-
-
-                console.log(head_image[index].textContent);
 
                 filter= head_image[index].textContent;
 
@@ -148,6 +130,7 @@ function search() {
         }
     });
 
+    /**esta no hace nada revisar */
     var new_search = input_search_gifs.value;
     filter = new_search;
 }
@@ -216,5 +199,24 @@ function change_white() {
 
     estilos.href = './css/style.css';
 }
+
+
+function open_page(){
+
+my_gifs[0].addEventListener("click", function(){
+
+
+
+    location.href= 'up_load.html';
+
+    console.log(x);
+
+
+});
+
+
+
+}
 trending();
 search();
+open_page();
