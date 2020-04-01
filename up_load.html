@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <script src="https://kit.fontawesome.com/6fa897ccd6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
 
-    <link  rel="stylesheet" href="./css/up_load.css" />
+    <link rel="stylesheet" href="./css/up_load.css" />
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="main">
@@ -22,15 +24,20 @@
 
         <section class="action_gifs">
             <div class="create_gifs">
+                <div class="arrow_back">
+
+                    <img src="./assets/arrow.svg" alt="logo_gifos">
+
+                </div>
                 <div class="logo">
                     <img src="./assets/gifOF_logo.png" alt="logo_gifos">
                 </div>
                 <div class="prueba">
                     <button class="button_create">Crear Guifos</button>
                     <div class="dropdown">
-                        <button class="dropbtn"  > Elegir tema
+                        <button class="dropbtn"> Elegir tema
                         </button>
-                        <div class="dropdown-content"  id="dropdown-content" >
+                        <div class="dropdown-content" id="dropdown-content">
                             <a href="#" class="myButton" id="sailor_day">Sailor Day</a>
                             <a href="#" class="myButton" id="sailor_night">Sailor night</a>
                         </div>
@@ -45,25 +52,75 @@
 
         <section class="create_video">
 
+            <div class="modal">
+               
+                    <div class="title_create">
+                        <p  class="title_guifos">Crear Guifos</p>
+                    </div>
 
-            <p>aca iria los videos</p>
-        </section>
 
-        
+                    <div>
+
+                         <!--   <img src="./assets/window_img.png" alt="">-->
+                    </div>
+
+                    <div class="text_create_gifos">
+
+                     
+
+                    <h1> Aqui podras crear tus propios guifos</h1>
+
+                    <p>
+                        Crear tu guifo es muy facil , graba cualquier imagen con tu cámara y obtén guifos
+                        personalizados.
+                        Los pasos para crear tu guifo son:
+
+                    </p>
+
+                    <ol>
+                        <li>Dar permisos de acceso a la cámara (Solo por el tiempo de uso)</li>
+                        <li>Capturar tu momento guifo</li>
+                        <li>Revisar el momento </li>
+                        <li> Listo para subir y compartir</li>
+
+                    </ol>
+                    <p>¿Quieres comenzar a crear tu guifo ahora?</p>
 
 
-        <section class="my_gifos">  
-            
-            <input class="suggestion_my_gifos" type="text" id="fname" name="firstname" placeholder="Mis guifos"  readonly>
+                </div>
 
-        <div  class="new_gifs" >
 
-            <div class="to_create_gifs">
+                <div class="button_decicde">
+
+                    <!--  <button>Cancelar</button>
+
+                    <button>Comenzar</button>  -->
+
+
+                </div>
 
 
             </div>
 
-        </div>
+
+        </section>
+
+
+
+
+        <section class="my_gifos">
+
+            <input class="suggestion_my_gifos" type="text" id="fname" name="firstname" placeholder="Mis guifos"
+                readonly>
+
+            <div class="new_gifs">
+
+                <div class="to_create_gifs">
+
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -72,6 +129,7 @@
 
 
     </div>
-    
+
 </body>
+
 </html>
