@@ -124,6 +124,11 @@
 
 .create_video {
   margin: 78px 378px 153px 378px; }
+  .create_video img {
+    display: flex;
+    justify-content: flex-start;
+    height: 32px;
+    width: 32px; }
   .create_video .modal {
     width: 684px;
     height: 386px;
@@ -170,6 +175,24 @@
     letter-spacing: 0;
     line-height: 22px;
     left: 20px; }
+  .create_video .button_decide {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 287px; }
+  .create_video .close {
+    width: 114px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: 16px; }
+  .create_video .start {
+    width: 114px;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: 36px; }
 
 .my_gifos {
   padding: 0 140px 68px 104px;
