@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background: #FCF3FD;
+  /* background: #FCF3FD;*/
   width: 100%;
   box-sizing: border-box; }
 
@@ -128,7 +128,8 @@
     width: 684px;
     height: 386px;
     background: #E6E6E6;
-    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    position: relative; }
   .create_video .title_create {
     height: 24px;
     width: 678px; }
@@ -141,8 +142,34 @@
     padding: 3px 0 3px 3px;
     margin: 0 0 0 3px; }
   .create_video .text_create_gifos {
-    margin: 30px 93px 28px 73px;
-    background: red; }
+    padding: 30px 93px 28px 73px;
+    position: absolute;
+    z-index: 3; }
+  .create_video h1 {
+    font-family: 'ChakraPetch-Bold';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px; }
+  .create_video ol {
+    padding-right: 7px; }
+  .create_video ol {
+    counter-reset: list; }
+  .create_video ol > li {
+    list-style: none;
+    position: relative; }
+  .create_video ol > li:before {
+    counter-increment: list;
+    content: counter(list) ") ";
+    position: absolute;
+    left: -20px; }
+  .create_video li {
+    font-family: 'ChakraPetch-Bold';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    left: 20px; }
 
 .my_gifos {
   padding: 0 140px 68px 104px;
