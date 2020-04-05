@@ -16,14 +16,15 @@
 .create_gifs {
   width: 1440px;
   height: 115px;
-  padding: 39px 140px 19px 60px;
+  padding: 39px 140px 19px 100px;
   display: flex;
   flex-direction: row;
   align-items: center; }
   .create_gifs .arrow_back {
     height: 24px;
     width: 24px;
-    padding-right: 7px; }
+    padding-right: 7px;
+    display: none; }
   .create_gifs .logo {
     height: 64px;
     width: 102.6px; }
@@ -123,7 +124,8 @@
       line-height: 18px; }
 
 .create_video {
-  margin: 78px 378px 153px 378px; }
+  margin: 78px 378px 153px 378px;
+  display: none; }
   .create_video img {
     display: flex;
     justify-content: flex-start;
@@ -139,19 +141,32 @@
     height: 24px;
     width: 678px; }
   .create_video .title_guifos {
-    font-family: ChakraPetch-Bold;
+    font-family: 'ChakraPetch-Bold';
     font-size: 14px;
     color: #FFFFFF;
     letter-spacing: 0;
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     padding: 3px 0 3px 3px;
     margin: 0 0 0 3px; }
+  .create_video .main_create {
+    padding: 30px 0 100px 0; }
+  .create_video .file_image {
+    padding: 0 16px 230px 25px;
+    float: left; }
   .create_video .text_create_gifos {
-    padding: 30px 93px 28px 73px;
+    float: right;
+    padding: 0 93px 28px 73px;
     position: absolute;
     z-index: 3; }
+  .create_video span {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    font-style: italic; }
+  .create_video p {
+    padding-top: 17px;
+    font-family: 'Chakra Petch', sans-serif; }
   .create_video h1 {
-    font-family: 'ChakraPetch-Bold';
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
     color: #110038;
     letter-spacing: 0;
@@ -162,14 +177,15 @@
     counter-reset: list; }
   .create_video ol > li {
     list-style: none;
-    position: relative; }
+    position: relative;
+    line-height: 10px; }
   .create_video ol > li:before {
     counter-increment: list;
     content: counter(list) ") ";
     position: absolute;
     left: -20px; }
   .create_video li {
-    font-family: 'ChakraPetch-Bold';
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
     color: #110038;
     letter-spacing: 0;
@@ -177,17 +193,16 @@
     left: 20px; }
   .create_video .button_decide {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 287px; }
+    justify-content: flex-end; }
   .create_video .close {
-    width: 114px;
+    width: 144px;
     height: 36px;
     background: #FFF4FD;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     margin-right: 16px; }
   .create_video .start {
-    width: 114px;
+    width: 144px;
     height: 36px;
     background: #F7C9F3;
     border: 1px solid #110038;

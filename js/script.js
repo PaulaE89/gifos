@@ -23,7 +23,9 @@ var head_image=document.getElementsByClassName("head_image");
 var all_cards=document.getElementsByClassName("all_cards");
 
 var my_gifs=document.getElementsByClassName("title");
-console.log(my_gifs);
+var  common_searchs=document.getElementsByClassName("button_search");
+
+
 
 
 
@@ -40,7 +42,6 @@ function trending() {
 
             console.log(response);
             for (var i = 0; i < 4; i++) {
-
                
               var name_title=response.data[i].title.split("Sticker")[0];
                    
@@ -56,26 +57,17 @@ function trending() {
           all_cards[0].append(html.body.children[0]);
 
          /*revisar*/ 
-
          var see_more_btn=document.querySelectorAll('.see_more');
          var head_image=document.querySelectorAll('.head_image');
-     
-        
+       
           see_more_btn.forEach( function (button,index){
-
             button.addEventListener("click", function(){
-
                 filter= head_image[index].textContent;
-
                 filter_search();
-
             });
-            
-            
+          
 
           });
-
-
             }
             
             for (var i = 4; i < gifs; i++) {
@@ -126,6 +118,8 @@ function search() {
 
         } else {
             filter = new_search
+             
+            show_result_gifs.classList.remove("show-list-gifs");
             filter_search();
         }
     });
@@ -176,7 +170,7 @@ function show_search(e) {
         show_result_gifs.classList.add("show-list-gifs");
         button_search.style.backgroundColor="#F7C9F3";
         button_search.style.color="#110038 ";
-        input_search_gifs.addEventListener('focusout', (event) => {
+        show_result_gifs.addEventListener('focusout', (event) => {
 
             
             show_result_gifs.classList.remove("show-list-gifs");
@@ -217,6 +211,28 @@ my_gifs[0].addEventListener("click", function(){
 
 
 }
+
+function  commons_searchs(){
+
+    console.log(common_searchs);
+
+
+    common_searchs.forEach(function(button,index){
+    button.addEventListener("click", function(){
+        console.log(common_searchs[index]);
+
+        console.log(common_searchs[index].textContent);
+
+
+
+
+    })
+});
+
+}
+
+
 trending();
 search();
 open_page();
+commons_searchs();
