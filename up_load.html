@@ -7,8 +7,9 @@
 
     <script src="https://kit.fontawesome.com/6fa897ccd6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="./css/up_load.css" />
     <title>Document</title>
@@ -50,65 +51,54 @@
             </div>
         </section>
 
-
-
         <section class="create_video" id="create_video">
 
-            <div class="modal">
-               
-                    <div class="title_create">
-                        <p  class="title_guifos">Crear Guifos</p>
-                    </div>
-
-
-                   
-                    <div class="main_create">
-                  
-                  
+            <div class="modal" id="modal">
+                <div class="title_create">
+                    <p class="title_guifos">Crear Guifos</p>
+                </div>
+                <div class="main_create">
                     <div class="file_image">
                         <img src="./assets/window_img.png" alt="">
-                                
                     </div>
+                    <div class="text_create_gifos">
+                        <h1> Aqui podras crear tus propios guifos</h1>
+                        <p>
+                            Crear tu <span>guifo</span> es muy facil , graba cualquier imagen con tu cámara y obtén
+                            guifos
+                            personalizados.
+                            Los pasos para crear tu guifo son:
 
+                        </p><br />
 
-                     
-                        <div class="text_create_gifos">
-                    <h1> Aqui podras crear tus propios guifos</h1>
+                        <ol>
+                            <li>Dar permisos de acceso a la cámara (Solo por el tiempo de uso)</li><br />
+                            <li>Capturar tu momento guifo</li><br />
+                            <li>Revisar el momento </li><br />
+                            <li> Listo para subir y compartir</li>
 
-                    <p>
-                        Crear tu <span>guifo</span> es muy facil , graba cualquier imagen con tu cámara y obtén guifos
-                        personalizados.
-                        Los pasos para crear tu guifo son:
-
-                    </p><br />
-
-                    <ol>
-                        <li>Dar permisos de acceso a la cámara (Solo por el tiempo de uso)</li><br />
-                        <li>Capturar tu momento guifo</li><br />
-                        <li>Revisar el momento </li><br />
-                        <li> Listo para subir y compartir</li>
-
-                    </ol>
-                    <p>¿Quieres comenzar a crear tu <span>guifo </span> ahora?</p>
-
-
+                        </ol>
+                        <p>¿Quieres comenzar a crear tu <span>guifo </span> ahora?</p>
+                    </div>
                 </div>
-
-
-            </div>
-
-
                 <div class="button_decide">
-
-                      <button class="close" id="close">Cancelar</button>
-
-                    <button class="start" id="start">Comenzar</button>  
-
-
+                    <button class="close" id="close">Cancelar</button>
+                    <button class="start" id="start">Comenzar</button>
                 </div>
-
-
             </div>
+
+
+            <div class="video_started">
+
+                <div class="title_video">Un chequeo Antes de Empezar<img src="./assets/button3.svg" alt=""
+                        class="close_video"></div>
+                <video id="video_no" autoplay> Video Stream not availabre.</video>
+                <div class="buttons_take_pic">
+                    <button class="camera_pic"><img src="./assets/camera.svg" alt=""></button>
+                    <button class="take_pic">Capturar</button>
+                </div>
+            </div>
+
 
 
         </section>
@@ -116,7 +106,7 @@
 
 
 
-        <section class="my_gifos">
+        <section class="my_gifos" id="my_gifos">
 
             <input class="suggestion_my_gifos" type="text" id="fname" name="firstname" placeholder="Mis guifos"
                 readonly>
@@ -131,6 +121,8 @@
             </div>
 
         </section>
+
+
 
 
 

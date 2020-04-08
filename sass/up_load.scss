@@ -5,14 +5,12 @@
     /* background: #FCF3FD;*/
     width: 100%;
     box-sizing: border-box;
-   
+
 
 }
 
 
-
 .header {
-
 
     p {
         width: 100%;
@@ -32,8 +30,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-
 
     .arrow_back {
         height: 24px;
@@ -210,10 +206,11 @@
 
 
     margin: 78px 378px 153px 378px;
-    display: none;
-    img{
-display: flex;
-justify-content: flex-start;
+    display: block;
+
+    img {
+        display: flex;
+        justify-content: flex-start;
 
         height: 32px;
         width: 32px;
@@ -227,14 +224,15 @@ justify-content: flex-start;
         position: relative;
 
     }
+
     .title_create {
 
         height: 24px;
         width: 678px;
     }
- 
+
     .title_guifos {
-        font-family:'ChakraPetch-Bold';
+        font-family: 'ChakraPetch-Bold';
         font-size: 14px;
         color: #FFFFFF;
         letter-spacing: 0;
@@ -244,42 +242,37 @@ justify-content: flex-start;
     }
 
 
-    .main_create{
+    .main_create {
 
-            padding:30px 0 100px 0;
+        padding: 30px 0 100px 0;
 
-        
+
     }
 
-    .file_image{
+    .file_image {
 
-
-        padding:0 16px 230px 25px;
+        padding: 0 16px 230px 25px;
         float: left;
-
-
-
     }
+
     .text_create_gifos {
         float: right;
-
         padding: 0 93px 28px 73px;
         position: absolute;
         z-index: 3;
     }
 
-    span{
+    span {
         font-family: 'Chakra Petch', sans-serif;
-       font-weight: bold;
+        font-weight: bold;
         font-style: italic;
 
 
     }
 
-    p{
+    p {
 
         padding-top: 17px;
-       
         font-family: 'Chakra Petch', sans-serif;
     }
 
@@ -292,9 +285,10 @@ justify-content: flex-start;
         letter-spacing: 0;
         line-height: 22px;
     }
+
     ol {
 
-       padding-right: 7px;
+        padding-right: 7px;
     }
 
     ol {
@@ -323,10 +317,11 @@ justify-content: flex-start;
         line-height: 22px;
         left: 20px;
     }
+
     .button_decide {
         display: flex;
         justify-content: flex-end;
-        
+
     }
 
     .close {
@@ -347,6 +342,114 @@ justify-content: flex-start;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         margin-right: 36px;
     }
+
+
+    /* estilo videos*/
+    .video_started {
+
+        margin-top: 30px;
+
+        height: 548px;
+        width: 860px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    }
+
+    .title_video{
+        font-family: ChakraPetch-Bold;
+font-size: 14px;
+color: #FFFFFF;
+letter-spacing: 0;
+
+        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        height: 24px;
+        width: 854px;
+        margin: 3px 4px 3px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+
+    }
+
+    
+    .close_video {
+        justify-content: center;
+        height: 14px;
+        width: 16px;
+        margin-right: 13px;
+    }
+
+    #video{
+
+
+        background:black;
+
+        height:434px ;
+
+        width: 832px;
+      
+
+        background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+
+margin: 8px 14px 0 8px;
+    }
+
+
+
+    .buttons_take_pic{
+
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 16px;
+        padding-top: 21px;
+
+
+
+    }
+
+
+    .camera_pic{
+
+
+        height: 36px;
+        width: 36px;
+
+        background: #F7C9F3;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+/*background: url('./assets/camera.svg');*/
+
+    }
+
+    img{
+
+
+        width: 18px;
+        height: 16.5px;
+      margin:9px 9px 10.5px 9px;
+    }
+    .take_pic{
+
+
+
+        width: 144px;
+        height: 36px;
+        background: #F7C9F3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+      
+
+
+
+
+    }
+
+
 }
 
 .my_gifos {
@@ -361,4 +464,7 @@ justify-content: flex-start;
         box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
         padding: 7px 0 7px 7px;
     }
+
+
+
 }

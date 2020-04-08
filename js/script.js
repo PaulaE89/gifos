@@ -17,13 +17,12 @@ var section = document.getElementById("advice");
 
 var trendings = document.getElementById("trendings");
 
-var head_image=document.getElementsByClassName("head_image");
+var head_image = document.getElementsByClassName("head_image");
 
 
-var all_cards=document.getElementsByClassName("all_cards");
+var all_cards = document.getElementsByClassName("all_cards");
 
-var my_gifs=document.getElementsByClassName("title");
-var  common_searchs=document.getElementsByClassName("button_search");
+var my_gifs = document.getElementsByClassName("title");
 
 
 
@@ -42,34 +41,34 @@ function trending() {
 
             console.log(response);
             for (var i = 0; i < 4; i++) {
-               
-              var name_title=response.data[i].title.split("Sticker")[0];
-                   
-                const cards_above=
-                `<div class="card">
+
+                var name_title = response.data[i].title.split("Sticker")[0];
+
+                const cards_above =
+                    `<div class="card">
               <div class="head_image">${name_title}<img src="./assets/button3.svg" alt="" class="close"></div>
               <img src="${response.data[i].images.original.url}" alt="..." class="add_image" >
               <button class="see_more">Ver más...</button>
           </div>`
 
-          const html = document.implementation.createHTMLDocument();
-          html.body.innerHTML = cards_above;
-          all_cards[0].append(html.body.children[0]);
+                const html = document.implementation.createHTMLDocument();
+                html.body.innerHTML = cards_above;
+                all_cards[0].append(html.body.children[0]);
 
-         /*revisar*/ 
-         var see_more_btn=document.querySelectorAll('.see_more');
-         var head_image=document.querySelectorAll('.head_image');
-       
-          see_more_btn.forEach( function (button,index){
-            button.addEventListener("click", function(){
-                filter= head_image[index].textContent;
-                filter_search();
-            });
-          
+                /*revisar*/
+                var see_more_btn = document.querySelectorAll('.see_more');
+                var head_image = document.querySelectorAll('.head_image');
 
-          });
+                see_more_btn.forEach(function (button, index) {
+                    button.addEventListener("click", function () {
+                        filter = head_image[index].textContent;
+                        filter_search();
+                    });
+
+
+                });
             }
-            
+
             for (var i = 4; i < gifs; i++) {
                 const cards =
                     `<div class="card_trending" data-id=${i}>
@@ -118,7 +117,6 @@ function search() {
 
         } else {
             filter = new_search
-             
             show_result_gifs.classList.remove("show-list-gifs");
             filter_search();
         }
@@ -168,20 +166,19 @@ function show_search(e) {
 
     if (e.target.value.length > 2) {
         show_result_gifs.classList.add("show-list-gifs");
-        button_search.style.backgroundColor="#F7C9F3";
-        button_search.style.color="#110038 ";
+        button_search.style.backgroundColor = "#F7C9F3";
+        button_search.style.color = "#110038 ";
         show_result_gifs.addEventListener('focusout', (event) => {
 
-            
+
             show_result_gifs.classList.remove("show-list-gifs");
         });
 
     } else {
 
         show_result_gifs.classList.remove("show-list-gifs");
-
-        button_search.style.backgroundColor="";
-        button_search.style.color="";
+        button_search.style.backgroundColor = "";
+        button_search.style.color = "";
     }
 }
 
@@ -195,44 +192,39 @@ function change_white() {
 }
 
 
-function open_page(){
+function open_page() {
 
-my_gifs[0].addEventListener("click", function(){
+    my_gifs[0].addEventListener("click", function () {
 
+        location.href = 'up_load.html';
 
-
-    location.href= 'up_load.html';
-
-    console.log(x);
-
-
-});
+    });
 
 
 
 }
 
-function  commons_searchs(){
+function trending_search() {
+
+
+    let common_searchs = document.querySelectorAll('.button_search');
+
 
     console.log(common_searchs);
 
 
-    common_searchs.forEach(function(button,index){
-    button.addEventListener("click", function(){
-        console.log(common_searchs[index]);
-
-        console.log(common_searchs[index].textContent);
+    common_searchs.forEach(function (button, index) {
+        button.addEventListener("click", function () {
 
 
-
-
-    })
-});
+            filter = common_searchs[index].textContent;
+            filter_search();
+        });
+    });
 
 }
-
 
 trending();
 search();
 open_page();
-commons_searchs();
+trending_search();
