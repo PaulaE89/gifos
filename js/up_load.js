@@ -49,14 +49,9 @@ function recording() {
             delete_main[0].style.display = "none";
             delete_btn_decide[0].style.display = "none";
             delete_title[0].style.display = "none";
-
-
-
             my_gifos.style.display = "none";
-
             modal.style.height = "548px";
             modal.style.width = "860px";
-
 
             const prueba =
 
@@ -64,7 +59,7 @@ function recording() {
                         class="close_video"></div>
                 <video id="video" autoplay> Video Stream not availabre.</video>
                 <div class="buttons_take_pic">
-                    <button class="camera_pic"><img src="./assets/camera.svg" alt=""></button>
+                    <button class="camera_pic"><img  class="camera"src="./assets/camera.svg" alt=""></button>
                     <button class="take_pic">Capturar</button>
                 </div>`
 
@@ -84,7 +79,7 @@ function recording() {
     }
 
 
-    function getStreamAndRecord() {
+    function getStreamAndRecord(){
 
         navigator.mediaDevices.getUserMedia({
 

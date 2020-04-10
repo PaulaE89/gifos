@@ -68,22 +68,14 @@
             background: #997D97;
         }
 
-
         &:active {
-
-
             border: 1px dotted #110038;
             outline-offset: -4000px;
-
-
-
         }
     }
 
-
     .dropdown {
         margin: 0 0 0 16px;
-
 
         &:hover {
             border: 1px dotted #110038;
@@ -194,17 +186,11 @@
             color: #110038;
             letter-spacing: 0;
             line-height: 18px;
-
-
         }
     }
 }
 
-
 .create_video {
-
-
-
     margin: 78px 378px 153px 378px;
     display: block;
 
@@ -344,8 +330,82 @@
     }
 
 
-    /* estilo videos*/
-    .video_started {
+    /* estilo videos 1 cuadro este primero hay q borrar porque es general*/
+
+
+    .title_video {
+        font-family: ChakraPetch-Bold;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+
+        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        height: 24px;
+        width: 854px;
+        margin: 3px 4px 3px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .close_video {
+        justify-content: center;
+        height: 14px;
+        width: 16px;
+        margin-right: 13px;
+    }
+
+    #video {
+        background: black;
+        height: 434px;
+        width: 832px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        margin: 8px 14px 0 8px;
+    }
+
+
+
+
+    .buttons_take_pic {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 16px;
+        padding-top: 21px;
+    }
+
+    .camera_pic {
+        height: 36px;
+        width: 36px;
+        background: #F7C9F3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+    }
+
+    .camera {
+
+        width: 18px;
+        height: 16.5px;
+        margin: 9px 9px 10.5px 9px;
+    }
+
+    .take_pic {
+
+        width: 144px;
+        height: 36px;
+        background: #F7C9F3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    }
+
+
+    /*primer cuadro
+    */
+
+
+    .video_started_1 {
 
         margin-top: 30px;
 
@@ -355,94 +415,262 @@
         box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     }
 
-    .title_video{
-        font-family: ChakraPetch-Bold;
-font-size: 14px;
-color: #FFFFFF;
-letter-spacing: 0;
-
-        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-        height: 24px;
-        width: 854px;
-        margin: 3px 4px 3px 4px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
 
+    #video_no {
 
-
-    }
-
-    
-    .close_video {
-        justify-content: center;
-        height: 14px;
-        width: 16px;
-        margin-right: 13px;
-    }
-
-    #video{
-
-
-        background:black;
-
-        height:434px ;
-
+        background: black;
+        height: 434px;
         width: 832px;
-      
-
         background: #FFFFFF;
-border: 1px solid #979797;
-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
-
-margin: 8px 14px 0 8px;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        margin: 8px 14px 0 8px;
     }
 
 
+    .timekeeper {
 
-    .buttons_take_pic{
 
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 16px;
-        padding-top: 21px;
 
+        width: 124px;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+
+
+        margin-right: 528px;
+
+    }
+
+    .timer {
+
+
+        font-family: 'ChakraPetch-Regular';
+        font-size: 16px;
+        color: #110038;
+        letter-spacing: 0;
+        line-height: 22px;
+        padding: 7px 13px 7px 21px;
 
 
     }
 
-
-    .camera_pic{
-
-
+    .recording {
         height: 36px;
         width: 36px;
-
-        background: #F7C9F3;
-border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-/*background: url('./assets/camera.svg');*/
+        background: #FF6161;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
 
     }
 
-    img{
-
+    .recording_image {
 
         width: 18px;
         height: 16.5px;
-      margin:9px 9px 10.5px 9px;
+        margin: 9px 9px 10.5px 9px;
     }
-    .take_pic{
 
 
+    .pic_done {
+
+        width: 144px;
+        height: 36px;
+        background: #FF6161;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+    }
+
+
+
+    /*segundo cuadro*/
+
+
+    .video_started_2 {
+
+        margin-top: 30px;
+
+        height: 548px;
+        width: 860px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    }
+
+
+
+    .timekeeper_v2 {
+
+
+        margin-left: 11px;
+        width: 124px;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+
+
+    }
+
+    .play {
+
+
+        width: 20px;
+        height: 20px;
+
+        margin: auto 4px auto 24px;
+        background: #F7C9F3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+
+
+    }
+
+    .counter_time {
+
+        width: 240px;
+        height: 24px;
+        background: #999999;
+        margin: auto 119px auto 0;
+
+       
+box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+
+    }
+    
+    .square{
+
+
+        background: red;
+    }
+
+    .play_image {
+
+        width: 6px;
+        height: 10px;
+        margin: auto;
+
+
+    }
+
+
+
+    .repeat {
+        margin-right: 14px;
+        width: 144px;
+        height: 36px;
+        background: #FFF4FD;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+    }
+
+
+
+    .up_load_gif {
 
         width: 144px;
         height: 36px;
         background: #F7C9F3;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-      
+    }
+
+
+    /*tercer cuadro*/
+
+    
+    .video_started_3 {
+
+        margin-top: 30px;
+
+        height: 548px;
+        width: 860px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    }
+
+
+
+    .delete_gif {
+
+        width: 144px;
+        height: 36px;
+        background: #FFF4FD;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    }
+
+
+
+    /**cuarto cuadro*/
+
+
+    .video_started_4 {
+
+        margin-top: 30px;
+
+        height: 391px;
+        width: 721px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    }
+
+
+    .title_video_4{
+        font-family: ChakraPetch-Bold;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+
+        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+        height: 24px;
+        width: 715px;
+        margin: 3px 4px 3px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    #video_4{
+        background: black;
+        height: 191px;
+        width: 365px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        margin: 8px 14px 0 8px;
+    }
+
+    .container{
+
+        display: flex;
+    }
+
+    .copy_link{
+
+
+        width: 256px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+
+    }
+
+    .download_gif{
+
+
+        width: 256px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 
 
 
@@ -450,7 +678,23 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
 
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .my_gifos {
     padding: 0 140px 68px 104px;

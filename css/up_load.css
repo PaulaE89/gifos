@@ -126,7 +126,12 @@
 .create_video {
   margin: 78px 378px 153px 378px;
   display: block;
-  /* estilo videos*/ }
+  /* estilo videos 1 cuadro este primero hay q borrar porque es general*/
+  /*primer cuadro
+  */
+  /*segundo cuadro*/
+  /*tercer cuadro*/
+  /**cuarto cuadro*/ }
   .create_video img {
     display: flex;
     justify-content: flex-start;
@@ -209,12 +214,6 @@
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     margin-right: 36px; }
-  .create_video .video_started {
-    margin-top: 30px;
-    height: 548px;
-    width: 860px;
-    background: #E6E6E6;
-    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
   .create_video .title_video {
     font-family: ChakraPetch-Bold;
     font-size: 14px;
@@ -250,9 +249,8 @@
     width: 36px;
     background: #F7C9F3;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-    /*background: url('./assets/camera.svg');*/ }
-  .create_video img {
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .camera {
     width: 18px;
     height: 16.5px;
     margin: 9px 9px 10.5px 9px; }
@@ -260,6 +258,147 @@
     width: 144px;
     height: 36px;
     background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .video_started_1 {
+    margin-top: 30px;
+    height: 548px;
+    width: 860px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .create_video #video_no {
+    background: black;
+    height: 434px;
+    width: 832px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    margin: 8px 14px 0 8px; }
+  .create_video .timekeeper {
+    width: 124px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    margin-right: 528px; }
+  .create_video .timer {
+    font-family: 'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    padding: 7px 13px 7px 21px; }
+  .create_video .recording {
+    height: 36px;
+    width: 36px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .recording_image {
+    width: 18px;
+    height: 16.5px;
+    margin: 9px 9px 10.5px 9px; }
+  .create_video .pic_done {
+    width: 144px;
+    height: 36px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .video_started_2 {
+    margin-top: 30px;
+    height: 548px;
+    width: 860px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .create_video .timekeeper_v2 {
+    margin-left: 11px;
+    width: 124px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000; }
+  .create_video .play {
+    width: 20px;
+    height: 20px;
+    margin: auto 4px auto 24px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .counter_time {
+    width: 240px;
+    height: 24px;
+    background: #999999;
+    margin: auto 119px auto 0;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .create_video .square {
+    background: red; }
+  .create_video .play_image {
+    width: 6px;
+    height: 10px;
+    margin: auto; }
+  .create_video .repeat {
+    margin-right: 14px;
+    width: 144px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .up_load_gif {
+    width: 144px;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .video_started_3 {
+    margin-top: 30px;
+    height: 548px;
+    width: 860px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .create_video .delete_gif {
+    width: 144px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .video_started_4 {
+    margin-top: 30px;
+    height: 391px;
+    width: 721px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .create_video .title_video_4 {
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    height: 24px;
+    width: 715px;
+    margin: 3px 4px 3px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .create_video #video_4 {
+    background: black;
+    height: 191px;
+    width: 365px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    margin: 8px 14px 0 8px; }
+  .create_video .container {
+    display: flex; }
+  .create_video .copy_link {
+    width: 256px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
+  .create_video .download_gif {
+    width: 256px;
+    height: 36px;
+    background: #FFF4FD;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
