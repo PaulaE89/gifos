@@ -23,19 +23,31 @@
 }
 
 
-.create_gifs {
+.action_gifs{
 
-    width: 1440px;    
+    width: 1440px;
     height: 115px;
-    padding: 39px 140px 19px 100px;
+
+
+
+    .create_gifs {
+        padding: 39px 140px 19px 100px;
+
+   
+    
     display: flex;
     flex-direction: row;
+
+    }
 
     .logo {
         height: 64px;
         width: 102.6px;
 
     }
+
+
+
 
     .prueba {
         display: flex;
@@ -53,6 +65,18 @@
         height: 36px;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+
+
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 14px;
+        color: #110038;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 18px;
+
+
+
 
         &:hover {
 
@@ -98,6 +122,12 @@
         height: 36px;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 14px;
+        color: #110038;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 18px;
     }
 
     .dropdown-content {
@@ -197,11 +227,11 @@
     }
 
 
- 
-
-
 
 }
+
+
+
 
 .search_gifs {
 
@@ -266,18 +296,7 @@
             color: #110038;
             letter-spacing: 0;
         }
-
-
-
-
-
-
-
     }
-
-
-  
-
 
     img {
         width: 16px;
@@ -290,10 +309,7 @@
             color: #110038;
             background-image: url('./assets/lupa.svg');
         }
-
-
     }
-
 
     .search_result {
         display: none;
@@ -329,24 +345,15 @@
         height: 34px;
         margin: 10px auto;
         font-family: 'Chakra Petch', ;
-
         font-size: 16px;
         letter-spacing: 0;
         line-height: 22px;
-
 
         &:hover {
             border: 1px dotted #110038;
             outline-offset: -4000px;
         }
-
-
-
     }
-
-
-
-
 }
 
 .advice {
@@ -362,20 +369,13 @@
         padding: 7px 0 7px 7px;
     }
 
-
     .all_cards {
 
         display: flex;
-
-
-
     }
-
     .card {
 
         flex-direction: row;
-
-
         width: 288px;
         height: 313px;
         margin: 16px 16px 0px 0px;
@@ -391,9 +391,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
     }
-
-   
 
     .close {
         justify-content: center;
@@ -405,6 +408,7 @@
         width: 280px;
         height: 280px;
         margin: 0 4px 3px 4px;
+
         &:hover {
             border: 1px dotted #110038;
             outline-offset: -4000px;
@@ -420,6 +424,13 @@
         width: 81px;
         top: -50px;
         margin-left: 11px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 18px;
+
         &:hover {
             border: 1px dotted #110038;
             outline-offset: -4000px;
@@ -431,10 +442,7 @@
 
     padding: 0 140px 68px 104px;
     width: 1200px;
-    
-
     .card_tendencias {
-
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         width: 1200px;
@@ -450,7 +458,7 @@
         padding: 7px 0 7px 7px;
     }
 
-    .card_trending{
+    .card_trending {
         width: 294px;
         height: 304px;
         margin: 17px 16px 16px 0;
@@ -471,7 +479,7 @@
         margin: 5px 0 0 4px;
     }
 
-    .empty_space p{
+    .empty_space p {
 
         background-color: red;
 

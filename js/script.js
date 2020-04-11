@@ -46,7 +46,7 @@ function trending() {
 
                 const cards_above =
                     `<div class="card">
-              <div class="head_image">${name_title}<img src="./assets/button3.svg" alt="" class="close"></div>
+              <div class="head_image">#${name_title}<img src="./assets/button3.svg" alt="" class="close"></div>
               <img src="${response.data[i].images.original.url}" alt="..." class="add_image" >
               <button class="see_more">Ver más...</button>
           </div>`
@@ -61,7 +61,10 @@ function trending() {
 
                 see_more_btn.forEach(function (button, index) {
                     button.addEventListener("click", function () {
-                        filter = head_image[index].textContent;
+                        let aux = head_image[index].textContent;
+
+                        filter=aux.substr(1);
+
                         filter_search();
                     });
 

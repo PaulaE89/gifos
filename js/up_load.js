@@ -13,6 +13,9 @@ var my_gifos = document.getElementById("my_gifos");
 
 var video_exterior;
 
+var capture_pic;
+
+console.log(capture_pic);
 
 
 function show_hide() {
@@ -45,17 +48,17 @@ function recording() {
     let modal = document.getElementById("modal");
 
     start_record.addEventListener("click", function () {
-            console.log(modal);
-            delete_main[0].style.display = "none";
-            delete_btn_decide[0].style.display = "none";
-            delete_title[0].style.display = "none";
-            my_gifos.style.display = "none";
-            modal.style.height = "548px";
-            modal.style.width = "860px";
+        console.log(modal);
+        delete_main[0].style.display = "none";
+        delete_btn_decide[0].style.display = "none";
+        delete_title[0].style.display = "none";
+        my_gifos.style.display = "none";
+        modal.style.height = "548px";
+        modal.style.width = "860px";
 
-            const prueba =
+        const prueba =
 
-                `<div class="title_video">Un chequeo Antes de Empezar<img src="./assets/button3.svg" alt=""
+            `<div class="title_video">Un chequeo Antes de Empezar<img src="./assets/button3.svg" alt=""
                         class="close_video"></div>
                 <video id="video" autoplay> Video Stream not availabre.</video>
                 <div class="buttons_take_pic">
@@ -63,54 +66,72 @@ function recording() {
                     <button class="take_pic">Capturar</button>
                 </div>`
 
-            const html = document.implementation.createHTMLDocument();
-            html.body.innerHTML = prueba;
-            console.log(html.body);
-            modal.append(html.body);
-            var video = document.querySelector('#video');
+        const html = document.implementation.createHTMLDocument();
+        html.body.innerHTML = prueba;
+      
+        modal.append(html.body);
+        var video = document.querySelector('#video');
+        var capture=document.getElementsByClassName('.take_pic');
 
-            console.log(video);
+        capture_pic=capture;
 
-
-             video_exterior = video;
-             getStreamAndRecord();
-            
-        })
-    }
+        console.log(video);
+        video_exterior = video;
 
 
-    function getStreamAndRecord(){
+        getStreamAndRecord();
 
-        navigator.mediaDevices.getUserMedia({
+      
 
-                audio: false,
 
-                video: {
 
-                    height: {
-                        ideal: 330
-                    },
-                    width: {
-                        ideal: 832
-                    }
+         
 
+
+      
+
+    })
+
+
+}
+
+
+function getStreamAndRecord() {
+
+    navigator.mediaDevices.getUserMedia({
+
+            audio: false,
+
+            video: {
+
+                height: {
+                    ideal: 430
+                },
+                width: {
+                    ideal: 832
                 }
 
-            })
+            }
 
-            .then(function (stream) {
+        }).then(function(stream){
 
-                console.log(stream);
+            console.log(stream);
 
-                video_exterior.srcObject = stream;
+            console.log("por aqui");
 
-                video_exterior.play();
+            video_exterior.srcObject = stream;
 
-            }).catch(console.error)
+            video_exterior.play();
 
-        console.log("problemas con tu resolucion de camara");
+        }).catch(console.error)
 
-    }
+      
+    console.log("problemas con tu resolucion de camara");
+
+    
+  
+
+}
 
 
 

@@ -2,14 +2,25 @@
     margin: 0;
     padding: 0;
     border: 0;
+    background: #130F38;
     width: 100%;
     box-sizing: border-box;
-
-    background: #130F38;
 }
 
-.create_gifs {
+.header {
 
+    p {
+        width: 100%;
+        height: 23px;
+        margin: 1px;
+        background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+        box-shadow: 0 1px 0 0 #110038;
+    }
+}
+
+
+.create_gifs {
+    width: 1440px;
     height: 115px;
     padding: 39px 140px 19px 100px;
     display: flex;
@@ -18,7 +29,6 @@
     .logo {
         height: 64px;
         width: 102.6px;
-
     }
 
     .prueba {
@@ -36,16 +46,39 @@
         background: #EE3EFE;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 18px;
 
-        /*doesnt work :( , how work this hover?*/
         &:hover {
-            border: 1px solid #110038;
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+            background: #997D97;
+        }
+
+        &:active {
+
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+
         }
     }
 
-
     .dropdown {
         margin: 0 0 0 16px;
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
+        &:active {
+
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+
+        }
     }
 
     .dropbtn {
@@ -55,6 +88,12 @@
         background: #EE3EFE;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 18px;
     }
 
     .dropdown-content {
@@ -74,42 +113,78 @@
         text-decoration: none;
         display: block;
         text-align: left;
-
-        background: #CCCCCC;
-        border: 1px solid #808080;
-        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
         width: 150px;
         height: 36px;
         margin: 10px auto;
+        background: #CCCCCC;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
-
-
+        &:active {
+            background: #2E32FB;
+            border: 1px solid rgba(51, 53, 143, 0.20);
+            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0
+        }
 
     }
 
     .arrow {
         width: 480px;
         height: 36px;
-        background: #F7C9F3;
-        border: 1px solid #110038;
         border-left: none;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-    }
-
-    .fas {
         background: #EE3EFE;
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
 
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
+
+        &:active {
+
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+
+        }
+    }
+
+    .fas {
+
+        background: #EE3EFE;
+
     }
 
     .title {
-      margin: 0 0 1px 16.5px;
+        margin: 0 0 1px 16.5px;
         font-family: 'Chakra Petch', ;
         font-size: 16px;
         color: #110038;
         letter-spacing: 0;
         line-height: 18px;
+        height: 32px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 18px;
+
+        &::first-letter {
+
+            text-decoration: underline;
+        }
+        &:hover {
+
+            border: 1px solid #FFFFFF;
+        }
+        /*check font `cause is differente now*/
+        &:active {
+
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 18px;
+        }
     }
 
 }
@@ -122,9 +197,6 @@
         width: 1200px;
         height: 99px;
         padding: 37px 12px 12px 15px;
-
-
-
         background: #B4B4B4;
         box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
     }
@@ -138,8 +210,7 @@
         background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
         font-size: 14px;
         color: #FFFFFF;
-
-        font-family: 'Chakra Petch', ;
+        font-family: 'Chakra Petch';
     }
 
     .search {
@@ -158,34 +229,37 @@
         height: 36px;
         width: 102px;
         font-size: 16px;
-
-        color: #8F8F8F;
         letter-spacing: 0;
         line-height: 18px;
         padding: 0 0 0 8px;
-
-
-
-
+        font-family: 'Chakra Petch', sans-serif;
         background: #B4B4B4;
         border: 1px solid #808080;
         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
-
-
-
-
+        &:active {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            background: #CE36DB;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+        }
     }
 
     img {
         width: 16px;
         height: 16px;
         margin-right: 10px;
-        background: #B4B4B4;
+        background: #E6E6E6;
 
+        &:active {
+            background: #F7C9F3;
+            color: #110038;
+            background-image: url('./assets/lupa.svg');
+        }
     }
-
-
     .search_result {
         display: none;
         position: absolute;
@@ -193,12 +267,15 @@
         z-index: 1;
         width: 1200px;
         height: 160px;
-
         padding: 17px 129px 5px 16px;
-
         background: #B4B4B4;
         box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
 
+    }
+
+    .show-list-gifs {
+
+        display: block;
     }
 
     .button_search {
@@ -209,21 +286,21 @@
         text-decoration: none;
         display: block;
         text-align: left;
-        background: #CCCCCC;
-        border: 1px solid #808080;
-        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
         width: 1055px;
         height: 34px;
         margin: 10px auto;
         font-family: 'Chakra Petch', ;
-
         font-size: 16px;
         letter-spacing: 0;
         line-height: 22px;
+        background: #CCCCCC;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
-
-
-
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
     }
 }
 
@@ -234,23 +311,25 @@
     .suggestion {
         width: 1200px;
         height: 32px;
-
         padding: 7px 0 7px 7px;
-
-
         background: #FFFAFE;
         border: 1px solid #2E32FB;
         box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
     }
 
+    .all_cards {
+       display: flex;
+
+    }
+
     .card {
+
+        flex-direction: row;
         width: 288px;
         height: 313px;
         margin: 16px 16px 0px 0px;
-
-
-        background: #B4B4B4;
-        box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     }
 
     .head_image {
@@ -261,6 +340,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
     }
 
     .close {
@@ -273,43 +357,83 @@
         width: 280px;
         height: 280px;
         margin: 0 4px 3px 4px;
+
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
     }
 
     .see_more {
         position: relative;
 
+        background: #2E32FB;
+        border: 1px solid #4C2F99;
+        box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
         height: 34px;
         width: 81px;
         top: -50px;
         margin-left: 11px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 18px;
 
-
-
-        background: #2E32FB;
-        border: 1px solid #4C2F99;
-        box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+        &:hover {
+            border: 1px dotted #110038;
+            outline-offset: -4000px;
+        }
     }
 }
 
 .tendencias {
 
     padding: 0 140px 68px 104px;
-    /*repetido*/
+    width: 1200px;
+
+    .card_tendencias {
+
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        width: 1200px;
+
+    }
 
     .suggestion {
         width: 1200px;
         height: 32px;
-
         padding: 7px 0 7px 7px;
-
         background: #FFFAFE;
         border: 1px solid #2E32FB;
         box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
     }
 
-    .card {
+    .card_trending {
+        width: 294px;
+        height: 304px;
+        margin: 17px 16px 16px 0;
+
+        &:hover {
+
+            width: 294px;
+            height: 304px;
+            background: #E6E6E6;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        }
+    }
+
+    img {
+        /*revisar esas margenes malas*/
         width: 288px;
         height: 298px;
-        padding: 16px 14px 16px 0;
+        margin: 5px 0 0 4px;
+    }
+
+    .empty_space p {
+
+        background-color: red;
+
     }
 }

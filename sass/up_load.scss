@@ -218,7 +218,8 @@
     }
 
     .title_guifos {
-        font-family: 'ChakraPetch-Bold';
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
         font-size: 14px;
         color: #FFFFFF;
         letter-spacing: 0;
@@ -334,7 +335,8 @@
 
 
     .title_video {
-        font-family: ChakraPetch-Bold;
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
         font-size: 14px;
         color: #FFFFFF;
         letter-spacing: 0;
@@ -446,8 +448,7 @@
 
     .timer {
 
-
-        font-family: 'ChakraPetch-Regular';
+        font-family: 'Chakra Petch', sans-serif;
         font-size: 16px;
         color: #110038;
         letter-spacing: 0;
@@ -530,21 +531,46 @@
 
     .counter_time {
 
-        width: 240px;
+        width: 250px;
         height: 24px;
-        background: #999999;
+
         margin: auto 119px auto 0;
 
-       
-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        background: #B4B4B4;
+        box-shadow: inset -2px -2px 0 0 #FFFCFC, inset 2px 2px 0 0 #000000;
 
 
     }
-    
-    .square{
+
+    .square {
 
 
-        background: red;
+        display: inline-block;
+        width: 12px;
+        height: 20px;
+        border: 1px solid #B4B4B4;
+        border-top: 0;
+        border-bottom: 0;
+        background: #999999;
+        position: relative;
+        top: 4px;
+        left: 5px;
+        margin: -2px;
+
+        &:first-child {
+
+            margin-left: -2px;
+
+            border-left: 0;
+        }
+
+
+        &:last-child {
+
+
+
+            border-right: 0;
+        }
     }
 
     .play_image {
@@ -582,7 +608,8 @@ box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 
     /*tercer cuadro*/
 
-    
+
+
     .video_started_3 {
 
         margin-top: 30px;
@@ -594,14 +621,118 @@ box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     }
 
 
+    .container_information {
+
+
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 139px;
+        padding-bottom: 138px;
+    }
+
+
+    .world {
+
+        width: 48px;
+        height: 48px;
+        margin-bottom: 8px;
+
+    }
+
+
+
+
+
+    .first_text{
+
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+text-align: center;
+line-height: 22px;
+
+
+margin-bottom:39px ;
+
+
+
+    }
+
+
+
+    
+    .counter_time_2 {
+
+        width: 245px;
+        height: 24px;
+
+        
+
+        background: #B4B4B4;
+        box-shadow: inset -2px -2px 0 0 #FFFCFC, inset 2px 2px 0 0 #000000;
+
+      
+
+
+    }
+
+
+    .square_1 {
+
+
+        display: inline-block;
+        width: 12px;
+        height: 20px;
+        border: 1px solid #B4B4B4;
+        border-top: 0;
+        border-bottom: 0;
+        background: #999999;
+        position: relative;
+        top: 4px;
+        
+        margin: -2px;
+
+        &:first-child {
+
+            margin-left: -2px;
+
+            border-left: 0;
+        }
+
+
+        &:last-child {
+
+
+
+            border-right: 0;
+        }
+    }
+
+    .time_left{
+
+        font-family: 'Chakra Petch', sans-serif;
+font-size: 12px;
+color: rgba(17,0,56,0.64);
+letter-spacing: 0;
+text-align: center;
+line-height: 14px;
+
+
+
+    }
+
 
     .delete_gif {
 
         width: 144px;
         height: 36px;
         background: #FFF4FD;
-border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
 
@@ -620,8 +751,9 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
 
-    .title_video_4{
-        font-family: ChakraPetch-Bold;
+    .title_video_4 {
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
         font-size: 14px;
         color: #FFFFFF;
         letter-spacing: 0;
@@ -636,44 +768,106 @@ box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     }
 
 
-    #video_4{
-        background: black;
-        height: 191px;
-        width: 365px;
-        background: #FFFFFF;
-        border: 1px solid #979797;
-        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
-        margin: 8px 14px 0 8px;
-    }
-
-    .container{
+    .container {
 
         display: flex;
     }
 
-    .copy_link{
+
+    #video_4 {
+        background: black;
+        height: 196px;
+        width: 371px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        margin: 27px 24px 0 24px;
+    }
+
+
+    .copy_dowloand_gif{
+
+        width: 326px;
+        height: 196px;
+
+        display: flex;
+
+  
+    
+        flex-direction: column;
+        margin-top:49px ;
+        
+       
+       
+    
+    }
+
+    h1{
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #110038;
+        letter-spacing: 0;
+        line-height: 22px;
+      
+
+    }
+  
+    .copy_link {
+
+        margin-top: 16px;
 
 
         width: 256px;
-    height: 36px;
-    background: #FFF4FD;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        height: 36px;
+        background: #FFF4FD;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+        font-family: 'Chakra Petch', sans-serif;
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+text-align: center;
+line-height: 18px;
 
 
     }
 
-    .download_gif{
+    .download_gif {
 
+
+        margin-top: 14px;
 
         width: 256px;
-    height: 36px;
-    background: #FFF4FD;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        height: 36px;
+        background: #FFF4FD;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        
+        
+        font-family: 'Chakra Petch', sans-serif;
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+text-align: center;
+line-height: 18px;
 
 
 
+    }
+
+
+    .done{
+
+        height: 36px;
+        width: 144px;
+
+        background: #F7C9F3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+        margin-right:30px;
 
     }
 

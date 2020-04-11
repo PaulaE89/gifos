@@ -13,51 +13,64 @@
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   box-shadow: 0 1px 0 0 #110038; }
 
-.create_gifs {
+.action_gifs {
   width: 1440px;
-  height: 115px;
-  padding: 39px 140px 19px 100px;
-  display: flex;
-  flex-direction: row; }
-  .create_gifs .logo {
+  height: 115px; }
+  .action_gifs .create_gifs {
+    padding: 39px 140px 19px 100px;
+    display: flex;
+    flex-direction: row; }
+  .action_gifs .logo {
     height: 64px;
     width: 102.6px; }
-  .create_gifs .prueba {
+  .action_gifs .prueba {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     width: 1088px; }
-  .create_gifs .button_create {
+  .action_gifs .button_create {
     margin: 0 0 0 650px;
     padding: 9px 26.5px;
     background: #F7C9F3;
     height: 36px;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
-    .create_gifs .button_create:hover {
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px; }
+    .action_gifs .button_create:hover {
       border: 1px dotted #110038;
       outline-offset: -4000px;
       background: #997D97; }
-    .create_gifs .button_create:active {
+    .action_gifs .button_create:active {
       border: 1px dotted #110038;
       outline-offset: -4000px; }
-  .create_gifs .dropdown {
+  .action_gifs .dropdown {
     margin: 0 0 0 16px; }
-    .create_gifs .dropdown:hover {
+    .action_gifs .dropdown:hover {
       border: 1px dotted #110038;
       outline-offset: -4000px; }
-    .create_gifs .dropdown:active {
+    .action_gifs .dropdown:active {
       border: 1px dotted #110038;
       outline-offset: -4000px; }
-  .create_gifs .dropbtn {
+  .action_gifs .dropbtn {
     padding: 9px 26.5px;
     background: #F7C9F3;
     width: 144px;
     height: 36px;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
-  .create_gifs .dropdown-content {
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px; }
+  .action_gifs .dropdown-content {
     display: none;
     position: absolute;
     min-width: 160px;
@@ -65,7 +78,7 @@
     width: 180px;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
-  .create_gifs .myButton {
+  .action_gifs .myButton {
     float: none;
     color: #110038;
     padding: 10px;
@@ -78,26 +91,26 @@
     width: 150px;
     height: 36px;
     margin: 10px auto; }
-    .create_gifs .myButton:active {
+    .action_gifs .myButton:active {
       background: #F0F0F0;
       border: 1px solid #808080;
       box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
-  .create_gifs .arrow {
+  .action_gifs .arrow {
     width: 480px;
     height: 36px;
     background: #F7C9F3;
     border: 1px solid #110038;
     border-left: none;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
-    .create_gifs .arrow:hover {
+    .action_gifs .arrow:hover {
       border: 1px dotted #110038;
       outline-offset: -4000px; }
-    .create_gifs .arrow:active {
+    .action_gifs .arrow:active {
       border: 1px dotted #110038;
       outline-offset: -4000px; }
-  .create_gifs .fas {
+  .action_gifs .fas {
     background: #F7C9F3; }
-  .create_gifs .title {
+  .action_gifs .title {
     margin: 0 0 1px 16.5px;
     font-family: "Chakra Petch";
     font-size: 16px;
@@ -106,11 +119,11 @@
     line-height: 18px;
     height: 32px;
     /*check font `cause is differente now*/ }
-    .create_gifs .title::first-letter {
+    .action_gifs .title::first-letter {
       text-decoration: underline; }
-    .create_gifs .title:hover {
+    .action_gifs .title:hover {
       border: 1px dotted #110038; }
-    .create_gifs .title:active {
+    .action_gifs .title:active {
       font-size: 16px;
       color: #110038;
       letter-spacing: 0;
@@ -227,7 +240,12 @@
     margin: 3px 4px 3px 4px;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0; }
   .advice .close {
     justify-content: center;
     height: 14px;
@@ -247,7 +265,13 @@
     height: 34px;
     width: 81px;
     top: -50px;
-    margin-left: 11px; }
+    margin-left: 11px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px; }
     .advice .see_more:hover {
       border: 1px dotted #110038;
       outline-offset: -4000px; }

@@ -2,11 +2,19 @@
   margin: 0;
   padding: 0;
   border: 0;
+  background: #130F38;
   width: 100%;
-  box-sizing: border-box;
-  background: #130F38; }
+  box-sizing: border-box; }
+
+.header p {
+  width: 100%;
+  height: 23px;
+  margin: 1px;
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  box-shadow: 0 1px 0 0 #110038; }
 
 .create_gifs {
+  width: 1440px;
   height: 115px;
   padding: 39px 140px 19px 100px;
   display: flex;
@@ -27,18 +35,40 @@
     background: #EE3EFE;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
-    /*doesnt work :( , how work this hover?*/ }
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px; }
     .create_gifs .button_create:hover {
-      border: 1px solid #110038; }
+      border: 1px dotted #110038;
+      outline-offset: -4000px;
+      background: #997D97; }
+    .create_gifs .button_create:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
   .create_gifs .dropdown {
     margin: 0 0 0 16px; }
+    .create_gifs .dropdown:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
+    .create_gifs .dropdown:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
   .create_gifs .dropbtn {
     padding: 9px 26.5px;
     width: 144px;
     height: 36px;
     background: #EE3EFE;
     border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF; }
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px; }
   .create_gifs .dropdown-content {
     display: none;
     position: absolute;
@@ -54,30 +84,54 @@
     text-decoration: none;
     display: block;
     text-align: left;
-    background: #CCCCCC;
-    border: 1px solid #808080;
-    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
     width: 150px;
     height: 36px;
-    margin: 10px auto; }
+    margin: 10px auto;
+    background: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
+    .create_gifs .myButton:active {
+      background: #2E32FB;
+      border: 1px solid rgba(51, 53, 143, 0.2);
+      box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0; }
   .create_gifs .arrow {
     width: 480px;
     height: 36px;
-    background: #F7C9F3;
-    border: 1px solid #110038;
     border-left: none;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
-  .create_gifs .fas {
     background: #EE3EFE;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF; }
+    .create_gifs .arrow:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
+    .create_gifs .arrow:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
+  .create_gifs .fas {
+    background: #EE3EFE; }
   .create_gifs .title {
     margin: 0 0 1px 16.5px;
     font-family: "Chakra Petch";
     font-size: 16px;
     color: #110038;
     letter-spacing: 0;
-    line-height: 18px; }
+    line-height: 18px;
+    height: 32px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 18px;
+    /*check font `cause is differente now*/ }
+    .create_gifs .title::first-letter {
+      text-decoration: underline; }
+    .create_gifs .title:hover {
+      border: 1px solid #FFFFFF; }
+    .create_gifs .title:active {
+      font-size: 16px;
+      color: #110038;
+      letter-spacing: 0;
+      line-height: 18px; }
 
 .search_gifs {
   padding: 0 140px 64px 100px; }
@@ -95,7 +149,7 @@
     background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
     font-size: 14px;
     color: #FFFFFF;
-    font-family: "Chakra Petch"; }
+    font-family: 'Chakra Petch'; }
   .search_gifs .search {
     height: 48px;
     padding: 13px 0 13px 16px;
@@ -108,18 +162,30 @@
     height: 36px;
     width: 102px;
     font-size: 16px;
-    color: #8F8F8F;
     letter-spacing: 0;
     line-height: 18px;
     padding: 0 0 0 8px;
+    font-family: 'Chakra Petch', sans-serif;
     background: #B4B4B4;
     border: 1px solid #808080;
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
+    .search_gifs .search-btn:active {
+      border: 1px dotted #110038;
+      outline-offset: -4000px;
+      font-size: 16px;
+      color: #110038;
+      letter-spacing: 0;
+      background: #CE36DB;
+      box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF; }
   .search_gifs img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
-    background: #B4B4B4; }
+    background: #E6E6E6; }
+    .search_gifs img:active {
+      background: #F7C9F3;
+      color: #110038;
+      background-image: url("./assets/lupa.svg"); }
   .search_gifs .search_result {
     display: none;
     position: absolute;
@@ -130,6 +196,8 @@
     padding: 17px 129px 5px 16px;
     background: #B4B4B4;
     box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF; }
+  .search_gifs .show-list-gifs {
+    display: block; }
   .search_gifs .button_search {
     float: none;
     color: #110038;
@@ -137,16 +205,19 @@
     text-decoration: none;
     display: block;
     text-align: left;
-    background: #CCCCCC;
-    border: 1px solid #808080;
-    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
     width: 1055px;
     height: 34px;
     margin: 10px auto;
     font-family: "Chakra Petch";
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 22px; }
+    line-height: 22px;
+    background: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF; }
+    .search_gifs .button_search:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
 
 .advice {
   height: 425px;
@@ -158,12 +229,15 @@
     background: #FFFAFE;
     border: 1px solid #2E32FB;
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038; }
+  .advice .all_cards {
+    display: flex; }
   .advice .card {
+    flex-direction: row;
     width: 288px;
     height: 313px;
     margin: 16px 16px 0px 0px;
-    background: #B4B4B4;
-    box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF; }
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
   .advice .head_image {
     background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
     height: 24px;
@@ -171,7 +245,12 @@
     margin: 3px 4px 3px 4px;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0; }
   .advice .close {
     justify-content: center;
     height: 14px;
@@ -180,19 +259,35 @@
     width: 280px;
     height: 280px;
     margin: 0 4px 3px 4px; }
+    .advice img:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
   .advice .see_more {
     position: relative;
+    background: #2E32FB;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
     height: 34px;
     width: 81px;
     top: -50px;
     margin-left: 11px;
-    background: #2E32FB;
-    border: 1px solid #4C2F99;
-    box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF; }
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px; }
+    .advice .see_more:hover {
+      border: 1px dotted #110038;
+      outline-offset: -4000px; }
 
 .tendencias {
   padding: 0 140px 68px 104px;
-  /*repetido*/ }
+  width: 1200px; }
+  .tendencias .card_tendencias {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 1200px; }
   .tendencias .suggestion {
     width: 1200px;
     height: 32px;
@@ -200,9 +295,21 @@
     background: #FFFAFE;
     border: 1px solid #2E32FB;
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038; }
-  .tendencias .card {
+  .tendencias .card_trending {
+    width: 294px;
+    height: 304px;
+    margin: 17px 16px 16px 0; }
+    .tendencias .card_trending:hover {
+      width: 294px;
+      height: 304px;
+      background: #E6E6E6;
+      box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
+  .tendencias img {
+    /*revisar esas margenes malas*/
     width: 288px;
     height: 298px;
-    padding: 16px 14px 16px 0; }
+    margin: 5px 0 0 4px; }
+  .tendencias .empty_space p {
+    background-color: red; }
 
 /*# sourceMappingURL=style_nigth.css.map */
