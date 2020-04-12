@@ -209,12 +209,7 @@ function open_page() {
 
 function trending_search() {
 
-
     let common_searchs = document.querySelectorAll('.button_search');
-
-
-    console.log(common_searchs);
-
 
     common_searchs.forEach(function (button, index) {
         button.addEventListener("click", function () {
