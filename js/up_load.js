@@ -11,20 +11,36 @@ var delete_btn_decide = document.getElementsByClassName("button_decide");
 var delete_title = document.getElementsByClassName("title_create");
 var my_gifos = document.getElementById("my_gifos");
 
+let delete_menu_btns = document.getElementsByClassName("buttons_take_pic");
+
 var video_exterior;
 
 var capture_pic;
+var title_video;
 
-
-var hour; 
+var hour;
 
 var minutes;
-var seconds ;
+var seconds;
 var miliseconds;
 var stopwatch;
 
 
 var pic_done;
+var timekeeper;
+
+var url;
+
+
+var play;
+
+var square;
+
+
+
+var repeat;
+
+var up_load_gif;
 
 
 function show_hide() {
@@ -92,8 +108,8 @@ function recording() {
 
         getStreamAndRecord();
 
-        /**este hay que cmbairlo deonde debe ir  */
-       delete_elements();
+        /**este hay que cmbairlo deonde debe ir  
+        delete_elements();*/
 
     })
 }
@@ -114,10 +130,15 @@ function getStreamAndRecord() {
 
     }).then(function (stream) {
 
-        console.log(stream);
+       
 
         video_exterior.srcObject = stream;
         video_exterior.play();
+
+        delete_elements();
+
+        /*validar si va aqui*/ 
+      /*  start_recording();*/
 
     }).catch(function (error) {
         console.log(error.message);
@@ -131,18 +152,36 @@ function delete_elements() {
 
         let delete_btn_camara = document.getElementsByClassName("camera_pic");
         let delete_take_pic = document.getElementsByClassName("take_pic");
-        let delete_menu_btns = document.getElementsByClassName("buttons_take_pic");
+
+ /**revisar si esto vale la pena si no dejarlo como era antes */
+        
+        delete_btn_camara[0].style.display="none";
+        delete_take_pic[0].style.display="none";
+/*
         delete_menu_btns[0].removeChild(delete_btn_camara[0]);
-        delete_menu_btns[0].removeChild(delete_take_pic[0]);
+        delete_menu_btns[0].removeChild(delete_take_pic[0]);*/
 
-        var title_video = document.querySelectorAll('.title_video');
+         title_video = document.querySelectorAll('.title_video');
 
-        title_video[0].textContent = "Capturado Tu Guifo";
+
+
+         var img= document.createElement("img");
+         img.src='./assets/button3.svg'
+     
+         img.setAttribute('class','close_video');
+      
+     
+         title_video[0].textContent = "Capturado Tu Guifo";
+         title_video[0].appendChild(img);
+
+
+
+       
 
 
         const new_menu_recording =
 
-            `  <div class="timekeeper">
+            `  <div class="timekeeper" id="timekeeper">
                 <p class="timer"><span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id="miliseconds">00</span></p>
             </div>
             <button class="recording"><img class="recording_image" src="./assets/recording_dark.svg"
@@ -152,52 +191,35 @@ function delete_elements() {
         delete_menu_btns[0].innerHTML = new_menu_recording;
 
 
-         hour = document.getElementById("hour");
+        hour = document.getElementById("hour");
 
-         minutes = document.getElementById("minutes");
+        minutes = document.getElementById("minutes");
 
-         seconds = document.getElementById("seconds");
+        seconds = document.getElementById("seconds");
 
-         miliseconds = document.getElementById("miliseconds");
+        miliseconds = document.getElementById("miliseconds");
 
-         pic_done=document.getElementById("pic_done");
-       
+        pic_done = document.getElementById("pic_done");
+        timekeeper = document.getElementById("timekeeper");
+
         start_stopwatch();
-        start_recording();
+      start_recording();
 
-
-
-
-
-
-})
+    })
 }
 
 
-
-
-
-
-
-
- function start_recording(){
-
-
-
+function start_recording() {
 
     navigator.mediaDevices.getUserMedia({
         video: true,
         audio: false
-    }).then(async function(stream) {
+    }).then(async function (stream) {
 
-
-
-       /* video_exterior.src=URL.createObjectURL(stream);
-        video_exterior.muted=true;*/
+        /* video_exterior.src=URL.createObjectURL(stream);
+         video_exterior.muted=true;*/
 
         let recorder = RecordRTC(stream, {
-           
-
 
             type: 'gif',
             frameRate: 1,
@@ -207,106 +229,340 @@ function delete_elements() {
         });
         recorder.startRecording();
 
+        /* const sleep = m => new Promise(r => setTimeout(r, m));
+         await sleep(5000);*/
+        pic_done.addEventListener("click", function () {
+
+            clearInterval(stopwatch);
+
+            recorder.stopRecording(function () {
+                let blob = recorder.getBlob();
+                url = URL.createObjectURL(blob);
+
+                video_exterior.src =url;
+                video_exterior.muted = true;
+
+                console.log(blob);
+
+               /* pruebaaa= invokeSaveAsDialog(blob);*/
+            
 
 
-    
-       /* const sleep = m => new Promise(r => setTimeout(r, m));
-        await sleep(5000);*/
+            })
 
-        stop();
 
-    
-        recorder.stopRecording(function() {
-            let blob = recorder.getBlob();
-            var url=URL.createObjectURL(blob);
 
-            video_exterior.src=url;
-            video_exterior.muted=true;
-            invokeSaveAsDialog(blob);
-        }).catch(function (error) {
-            console.log(error.message);
+            
+
+
+            add_timer();
+
         })
-    });
+    }).catch(function (error) {
+        console.log(error.message);
+    })
+}
 
 
+function start_stopwatch() {
 
 
-
-
-
- }
-
-
-
-
-
-function start_stopwatch(){
-
-  
-    
     contador_h = 0;
     contador_m = 0;
     contador_s = 0;
     contador_ml = 0;
 
-       
-    stopwatch= setInterval(function () {
+
+    stopwatch = setInterval(function () {
+
+        if (contador_ml == 60) {
+
+            console.log(contador_ml);
 
 
-        
+            contador_ml = 0;
+            contador_s++;
+            seconds.innerHTML = contador_s;
+
+            if (contador_s == 60)
+
+            {
+
+                console.log(contador_s) ;
+                contador_s = 0;
+                contador_m++;
+                minutes.innerHTML = contador_m;
+
+                if (contador_m == 60) {
 
 
-            if (contador_ml == 60) {
-                contador_ml = 0;
-                contador_s++;
-                seconds.innerHTML = contador_s;
 
-                if (contador_s == 60)
-
-                {
-                    contador_s = 0;
-                    contador_m++;
-                    minutes.innerHTML = contador_m;
-
-                    if (contador_m == 60) {
-
-                        contador_m = 0;
-                        contador_h++;
-                        hour.innerHTML = contador_h;
-                    }
+                    console.log(contador_m) ;
+                    contador_m = 0;
+                    contador_h++;
+                    hour.innerHTML = contador_h;
                 }
             }
+        }
 
-         
-            miliseconds.innerHTML = contador_ml;
-            contador_ml++;
 
+        miliseconds.innerHTML = contador_ml;
+        contador_ml++;
+
+
+    }, 10)
+
+
+
+ 
+
+   /* stop();*/
+
+}
+
+
+function add_timer() {
+
+    let delete_recording = document.getElementsByClassName("recording");
+
+    let pic_done = document.getElementsByClassName("pic_done");
+    /* let timekeeper=document.getElementsByClassName("timekeeper");*/
+
+    delete_menu_btns[0].removeChild(delete_recording[0]);
+    delete_menu_btns[0].removeChild(pic_done[0]);
+
+
+    title_video = document.querySelectorAll('.title_video');
+
+    timekeeper.style.marginRight = "0";
+    timekeeper.style.marginLeft = "11px";
+
+
+
+    var img= document.createElement("img");
+    img.src='./assets/button3.svg'
+
+    img.setAttribute('class','close_video');
+ 
+
+    title_video[0].textContent = "Vista Previa";
+    title_video[0].appendChild(img);
+
+
+    video_exterior.src =url;
+
+
+    console.log(delete_menu_btns[0]);
     
 
-        }, 10)
 
+    const counter_time =
 
+        ` 
+    <button class="play" id="play"><img class="play_image" src="./assets/forward.svg" alt=""></button>
+    <div class="counter_time">
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
+        <div class=square></div>
        
+        
+    </div>
+    <button class="repeat" id="repeat">Repetir Captura</button>
+    <button class="up_load_gif" id="up_load_gif">Subir Guifos</button> `
+
+    delete_menu_btns[0].insertAdjacentHTML('beforeend', counter_time);
+    console.log(url);
+
+ square=document.getElementsByClassName("square");
+
+     play=document.getElementById("play");
+
+     repeat=document.getElementById("repeat");
+     up_load_gif=document.getElementById("up_load_gif");
+
+
+     play.addEventListener("click", play_guifo);
+
+     up_load_gif.addEventListener("click", up_load);
+
+
+
+
+
+
+
+
 }
 
 
 
-function stop(){
 
-    pic_done.addEventListener("click", function(){
+function up_load(){
 
+
+
+    video_exterior.style.display="none";
+
+    delete_menu_btns[0].style.display="none";
+    
+     var img= document.createElement("img");
+     img.src='./assets/button3.svg'
+
+     img.setAttribute('class','close_video');
+     title_video[0].textContent = "Subiendo Guifo";
+
+     title_video[0].appendChild(img);
+
+ 
+
+     const up_gifo=
+    ` 
+
+    <div id="video_no" >
+
+    <div class="container_information">    
+
+        <img  class="world"src="./assets/globe_img.png" alt="">
+        
+        <p class="first_text" >Estamos subiendo tu guifo..</p>
+
+
+        <div class="counter_time_2">
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+            <div class=square_1></div>
+           
+            
+        </div>
+
+        <p class="time_left">Tiempo restante:38 años algunos minutos</p>
+
+
+    </div>
+
+</div>
+<div class="buttons_take_pic">
+
+
+    <button class="delete_gif">Cancelar</button>
+</div>
+</div> ` 
+
+
+modal.insertAdjacentHTML('beforeend',  up_gifo);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+function play_guifo(){
+
+
+    console.log(pruebaaa);
+
+
+
+    console.log(minutes.textContent);
+    console.log(seconds.textContent);
+     console.log(miliseconds.textContent);
+     console.log(hour.textContent);
+
+
+
+    console.log("wre are in play");
+
+
+    var int_hour=parseInt(hour.textContent);
+    var int_minutes=parseInt(minutes.textContent);
+    var int_seconds=parseInt(seconds.textContent);
+    var int_mili=parseInt(miliseconds.textContent);
+
+
+    console.log(int_hour);
+    console.log(int_minutes);
+    console.log(int_seconds);
+     console.log(int_mili);
+  
+
+
+    var total_tiempo=((int_minutes))  ;
+
+        console.log(total_tiempo);
+    for (var i = 0; i < total_tiempo; i++){
+
+
+        square[i].style.backgroungcolor="red";
+
+
+
+
+
+
+    }
+
+
+
+
+}
+
+/*
+function stop() {
+
+    pic_done.addEventListener("click", function () {
         clearInterval(stopwatch);
 
+        console.log(stopwatch);
 
-     console.log(video_exterior);
+        add_timer();
+
 
 
     })
-
-
-
-
 }
+*/
 
 
 
