@@ -42,6 +42,8 @@ var repeat;
 
 var up_load_gif;
 
+var preview;
+
 
 function show_hide() {
 
@@ -130,15 +132,13 @@ function getStreamAndRecord() {
 
     }).then(function (stream) {
 
-       
-
         video_exterior.srcObject = stream;
         video_exterior.play();
 
         delete_elements();
 
-        /*validar si va aqui*/ 
-      /*  start_recording();*/
+        /*validar si va aqui*/
+        /*  start_recording();*/
 
     }).catch(function (error) {
         console.log(error.message);
@@ -150,33 +150,31 @@ function delete_elements() {
 
     capture_pic.addEventListener('click', function () {
 
+        takeScreenshotFromRecord();
+
         let delete_btn_camara = document.getElementsByClassName("camera_pic");
         let delete_take_pic = document.getElementsByClassName("take_pic");
 
- /**revisar si esto vale la pena si no dejarlo como era antes */
-        
-        delete_btn_camara[0].style.display="none";
-        delete_take_pic[0].style.display="none";
-/*
-        delete_menu_btns[0].removeChild(delete_btn_camara[0]);
-        delete_menu_btns[0].removeChild(delete_take_pic[0]);*/
+        /**revisar si esto vale la pena si no dejarlo como era antes */
 
-         title_video = document.querySelectorAll('.title_video');
+        delete_btn_camara[0].style.display = "none";
+        delete_take_pic[0].style.display = "none";
+        /*
+                delete_menu_btns[0].removeChild(delete_btn_camara[0]);
+                delete_menu_btns[0].removeChild(delete_take_pic[0]);*/
 
+        title_video = document.querySelectorAll('.title_video');
 
+        var img = document.createElement("img");
+        img.src = './assets/button3.svg'
+        img.setAttribute('class', 'close_video');
 
-         var img= document.createElement("img");
-         img.src='./assets/button3.svg'
-     
-         img.setAttribute('class','close_video');
-      
-     
-         title_video[0].textContent = "Capturado Tu Guifo";
-         title_video[0].appendChild(img);
+        title_video[0].textContent = "Capturado Tu Guifo";
+        title_video[0].appendChild(img);
 
 
 
-       
+
 
 
         const new_menu_recording =
@@ -203,7 +201,7 @@ function delete_elements() {
         timekeeper = document.getElementById("timekeeper");
 
         start_stopwatch();
-      start_recording();
+        start_recording();
 
     })
 }
@@ -236,23 +234,30 @@ function start_recording() {
             clearInterval(stopwatch);
 
             recorder.stopRecording(function () {
+
+
                 let blob = recorder.getBlob();
                 url = URL.createObjectURL(blob);
 
-                video_exterior.src =url;
+                console.log(url);
+
+                video_exterior.src = url;
                 video_exterior.muted = true;
+
+
+               /* this.stream.getTracks().forEach((track)=> track.stop());*/
 
                 console.log(blob);
 
-               /* pruebaaa= invokeSaveAsDialog(blob);*/
-            
+               /*   invokeSaveAsDialog(blob);*/
+
 
 
             })
 
 
 
-            
+
 
 
             add_timer();
@@ -288,7 +293,7 @@ function start_stopwatch() {
 
             {
 
-                console.log(contador_s) ;
+                console.log(contador_s);
                 contador_s = 0;
                 contador_m++;
                 minutes.innerHTML = contador_m;
@@ -297,7 +302,7 @@ function start_stopwatch() {
 
 
 
-                    console.log(contador_m) ;
+                    console.log(contador_m);
                     contador_m = 0;
                     contador_h++;
                     hour.innerHTML = contador_h;
@@ -314,11 +319,31 @@ function start_stopwatch() {
 
 
 
- 
 
-   /* stop();*/
+
+    /* stop();*/
 
 }
+
+
+
+takeScreenshotFromRecord = () => {
+    try {
+
+        console.log("estamos aquiiii");
+      // Taken from https://developer.mozilla.org/es/docs/WebRTC/Taking_webcam_photos
+      let canvas = document.createElement('canvas'); // Dynamically Create a Canvas Element
+      canvas.id = 'extractFileCanvas'; // Give the canvas an id
+      canvas.width = this.video.videoWidth; // Set the width of the Canvas
+      canvas.height = this.video.videoHeight; // Set the height of the Canvas
+      let ctx = canvas.getContext('2d'); // Get the "CTX" of the canvas
+      ctx.drawImage(this.video, 0, 0, this.video.videoWidth, this.video.videoHeight); // Draw your image to the canvas
+      url = canvas.toDataURL('image/png'); // This will save your image as a //png file in the base64 format.
+      preview.src = url;
+    } catch (err) {
+      console.error(`Failed to take screenshot from record. ${err}`);
+    }
+  };
 
 
 function add_timer() {
@@ -339,26 +364,40 @@ function add_timer() {
 
 
 
-    var img= document.createElement("img");
-    img.src='./assets/button3.svg'
+    var img = document.createElement("img");
+    img.src = './assets/button3.svg'
 
-    img.setAttribute('class','close_video');
- 
+    img.setAttribute('class', 'close_video');
+
 
     title_video[0].textContent = "Vista Previa";
     title_video[0].appendChild(img);
 
-
-    video_exterior.src =url;
-
-
-    console.log(delete_menu_btns[0]);
     
+    video.style.display="none";
+
+
+/*    var image_preview= document.createElement("img");
+    image_preview.src='./assets/button3.svg'
+
+    image_preview.setAttribute('class','preview')*/
+   
+
+
+  /*  video_exterior.src = url;*/
+
+
+
+  const image_preview= ` <img  id="preview" src="" alt=preview_gifos> ` 
+
+  delete_menu_btns[0].insertAdjacentHTML('beforebegin', image_preview);
+
+
 
 
     const counter_time =
 
-        ` 
+        `  
     <button class="play" id="play"><img class="play_image" src="./assets/forward.svg" alt=""></button>
     <div class="counter_time">
         <div class=square></div>
@@ -388,19 +427,26 @@ function add_timer() {
     <button class="up_load_gif" id="up_load_gif">Subir Guifos</button> `
 
     delete_menu_btns[0].insertAdjacentHTML('beforeend', counter_time);
+
+
+
+
     console.log(url);
 
- square=document.getElementsByClassName("square");
+    square = document.getElementsByClassName("square");
 
-     play=document.getElementById("play");
+    play = document.getElementById("play");
 
-     repeat=document.getElementById("repeat");
-     up_load_gif=document.getElementById("up_load_gif");
+    repeat = document.getElementById("repeat");
+    up_load_gif = document.getElementById("up_load_gif");
 
 
-     play.addEventListener("click", play_guifo);
+    preview=document.getElementById("preview");
 
-     up_load_gif.addEventListener("click", up_load);
+
+    play.addEventListener("click", play_guifo);
+
+    up_load_gif.addEventListener("click", up_load);
 
 
 
@@ -414,26 +460,26 @@ function add_timer() {
 
 
 
-function up_load(){
+function up_load() {
 
 
 
-    video_exterior.style.display="none";
+    video_exterior.style.display = "none";
 
-    delete_menu_btns[0].style.display="none";
-    
-     var img= document.createElement("img");
-     img.src='./assets/button3.svg'
+    delete_menu_btns[0].style.display = "none";
 
-     img.setAttribute('class','close_video');
-     title_video[0].textContent = "Subiendo Guifo";
+    var img = document.createElement("img");
+    img.src = './assets/button3.svg'
 
-     title_video[0].appendChild(img);
+    img.setAttribute('class', 'close_video');
+    title_video[0].textContent = "Subiendo Guifo";
 
- 
+    title_video[0].appendChild(img);
 
-     const up_gifo=
-    ` 
+
+
+    const up_gifo =
+        ` 
 
     <div id="video_no" >
 
@@ -480,10 +526,10 @@ function up_load(){
 
     <button class="delete_gif">Cancelar</button>
 </div>
-</div> ` 
+</div> `
 
 
-modal.insertAdjacentHTML('beforeend',  up_gifo);
+    modal.insertAdjacentHTML('beforeend', up_gifo);
 
 
 
@@ -496,9 +542,9 @@ modal.insertAdjacentHTML('beforeend',  up_gifo);
 
 
 
+/**revisar despues  */
 
-
-function play_guifo(){
+function play_guifo() {
 
 
     console.log(pruebaaa);
@@ -507,34 +553,34 @@ function play_guifo(){
 
     console.log(minutes.textContent);
     console.log(seconds.textContent);
-     console.log(miliseconds.textContent);
-     console.log(hour.textContent);
+    console.log(miliseconds.textContent);
+    console.log(hour.textContent);
 
 
 
     console.log("wre are in play");
 
 
-    var int_hour=parseInt(hour.textContent);
-    var int_minutes=parseInt(minutes.textContent);
-    var int_seconds=parseInt(seconds.textContent);
-    var int_mili=parseInt(miliseconds.textContent);
+    var int_hour = parseInt(hour.textContent);
+    var int_minutes = parseInt(minutes.textContent);
+    var int_seconds = parseInt(seconds.textContent);
+    var int_mili = parseInt(miliseconds.textContent);
 
 
     console.log(int_hour);
     console.log(int_minutes);
     console.log(int_seconds);
-     console.log(int_mili);
-  
+    console.log(int_mili);
 
 
-    var total_tiempo=((int_minutes))  ;
 
-        console.log(total_tiempo);
-    for (var i = 0; i < total_tiempo; i++){
+    var total_tiempo = ((int_minutes));
+
+    console.log(total_tiempo);
+    for (var i = 0; i < total_tiempo; i++) {
 
 
-        square[i].style.backgroungcolor="red";
+        square[i].style.backgroungcolor = "red";
 
 
 
