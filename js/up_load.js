@@ -150,7 +150,7 @@ function delete_elements() {
 
     capture_pic.addEventListener('click', function () {
 
-        takeScreenshotFromRecord();
+        /* takeScreenshotFromRecord();*/
 
         let delete_btn_camara = document.getElementsByClassName("camera_pic");
         let delete_take_pic = document.getElementsByClassName("take_pic");
@@ -209,13 +209,53 @@ function delete_elements() {
 
 function start_recording() {
 
+
+
+    if (navigator.mediaDevices === undefined) {
+        navigator.mediaDevices = {};
+        navigator.mediaDevices.getUserMedia = function (constraintObj) {
+            let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+            if (!getUserMedia) {
+                return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+            }
+            return new Promise(function (resolve, reject) {
+                getUserMedia.call(navigator, constraintObj, resolve, reject);
+            });
+        }
+    } else {
+        navigator.mediaDevices.enumerateDevices()
+            .then(devices => {
+                devices.forEach(device => {
+                    console.log(device.kind.toUpperCase(), device.label);
+                    //, device.deviceId
+                })
+            })
+            .catch(err => {
+                console.log(err.name, err.message);
+            })
+    }
+
+
+
+
+
+
+
+
+
     navigator.mediaDevices.getUserMedia({
+
+
+
+
+
+
         video: true,
         audio: false
     }).then(async function (stream) {
 
-        /* video_exterior.src=URL.createObjectURL(stream);
-         video_exterior.muted=true;*/
+
+        video_exterior.muted = true;
 
         let recorder = RecordRTC(stream, {
 
@@ -227,8 +267,7 @@ function start_recording() {
         });
         recorder.startRecording();
 
-        /* const sleep = m => new Promise(r => setTimeout(r, m));
-         await sleep(5000);*/
+
         pic_done.addEventListener("click", function () {
 
             clearInterval(stopwatch);
@@ -237,19 +276,27 @@ function start_recording() {
 
 
                 let blob = recorder.getBlob();
-                url = URL.createObjectURL(blob);
 
-                console.log(url);
+                console.log(blob);
+
+
+                /* let form= new FormData();
+
+                 form.append('file', blob,'gif.gif');*/
+
+                console.log(URL.createObjectURL);
+
+                url = URL.createObjectURL(blob);
 
                 video_exterior.src = url;
                 video_exterior.muted = true;
 
 
-               /* this.stream.getTracks().forEach((track)=> track.stop());*/
+                /* this.stream.getTracks().forEach((track)=> track.stop());*/
 
                 console.log(blob);
 
-               /*   invokeSaveAsDialog(blob);*/
+                /*   invokeSaveAsDialog(blob);*/
 
 
 
@@ -325,25 +372,25 @@ function start_stopwatch() {
 
 }
 
-
+/**revisar porque no sirve pa hongo */
 
 takeScreenshotFromRecord = () => {
     try {
 
         console.log("estamos aquiiii");
-      // Taken from https://developer.mozilla.org/es/docs/WebRTC/Taking_webcam_photos
-      let canvas = document.createElement('canvas'); // Dynamically Create a Canvas Element
-      canvas.id = 'extractFileCanvas'; // Give the canvas an id
-      canvas.width = this.video.videoWidth; // Set the width of the Canvas
-      canvas.height = this.video.videoHeight; // Set the height of the Canvas
-      let ctx = canvas.getContext('2d'); // Get the "CTX" of the canvas
-      ctx.drawImage(this.video, 0, 0, this.video.videoWidth, this.video.videoHeight); // Draw your image to the canvas
-      url = canvas.toDataURL('image/png'); // This will save your image as a //png file in the base64 format.
-      preview.src = url;
+        // Taken from https://developer.mozilla.org/es/docs/WebRTC/Taking_webcam_photos
+        let canvas = document.createElement('canvas'); // Dynamically Create a Canvas Element
+        canvas.id = 'extractFileCanvas'; // Give the canvas an id
+        canvas.width = this.video.videoWidth; // Set the width of the Canvas
+        canvas.height = this.video.videoHeight; // Set the height of the Canvas
+        let ctx = canvas.getContext('2d'); // Get the "CTX" of the canvas
+        ctx.drawImage(this.video, 0, 0, this.video.videoWidth, this.video.videoHeight); // Draw your image to the canvas
+        url = canvas.toDataURL('image/png'); // This will save your image as a //png file in the base64 format.
+        preview.src = url;
     } catch (err) {
-      console.error(`Failed to take screenshot from record. ${err}`);
+        console.error(`Failed to take screenshot from record. ${err}`);
     }
-  };
+};
 
 
 function add_timer() {
@@ -373,24 +420,24 @@ function add_timer() {
     title_video[0].textContent = "Vista Previa";
     title_video[0].appendChild(img);
 
-    
-    video.style.display="none";
+
+    video.style.display = "none";
 
 
-/*    var image_preview= document.createElement("img");
-    image_preview.src='./assets/button3.svg'
+    /*    var image_preview= document.createElement("img");
+        image_preview.src='./assets/button3.svg'
 
-    image_preview.setAttribute('class','preview')*/
-   
-
-
-  /*  video_exterior.src = url;*/
+        image_preview.setAttribute('class','preview')*/
 
 
 
-  const image_preview= ` <img  id="preview" src="" alt=preview_gifos> ` 
+    /*  video_exterior.src = url;*/
 
-  delete_menu_btns[0].insertAdjacentHTML('beforebegin', image_preview);
+
+
+    const image_preview = ` <img  id="preview" src="" alt=preview_gifos> `
+
+    delete_menu_btns[0].insertAdjacentHTML('beforebegin', image_preview);
 
 
 
@@ -441,12 +488,14 @@ function add_timer() {
     up_load_gif = document.getElementById("up_load_gif");
 
 
-    preview=document.getElementById("preview");
+    preview = document.getElementById("preview");
 
 
     play.addEventListener("click", play_guifo);
 
     up_load_gif.addEventListener("click", up_load);
+
+    repeat.addEventListener("click", recharge_page);
 
 
 
@@ -458,6 +507,22 @@ function add_timer() {
 }
 
 
+/** function to repeat recordind */
+function recharge_page(){
+
+    console.log("work or not");
+    location.reload(create_my_images());
+
+
+
+
+
+
+}
+
+
+
+/** function to up load gif */
 
 
 function up_load() {
@@ -543,22 +608,19 @@ function up_load() {
 
 
 /**revisar despues  */
+var index = 0;
+var colores;
 
+
+/** methods to reproduce video  */
 function play_guifo() {
 
 
-    console.log(pruebaaa);
 
 
 
-    console.log(minutes.textContent);
-    console.log(seconds.textContent);
-    console.log(miliseconds.textContent);
-    console.log(hour.textContent);
+    console.log(square);
 
-
-
-    console.log("wre are in play");
 
 
     var int_hour = parseInt(hour.textContent);
@@ -567,26 +629,20 @@ function play_guifo() {
     var int_mili = parseInt(miliseconds.textContent);
 
 
-    console.log(int_hour);
-    console.log(int_minutes);
-    console.log(int_seconds);
-    console.log(int_mili);
 
 
+    colores = setInterval(() => {
 
-    var total_tiempo = ((int_minutes));
+        change_color(square)
+    }, 100);
+}
 
-    console.log(total_tiempo);
-    for (var i = 0; i < total_tiempo; i++) {
+function change_color(square) {
 
-
-        square[i].style.backgroungcolor = "red";
-
-
-
-
-
-
+    square[index].classList.toggle("change_color");
+    index++;
+    if (index >= square.length) {
+        clearInterval(colores);
     }
 
 

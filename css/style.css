@@ -176,7 +176,7 @@
     width: 16px;
     height: 16px;
     margin-right: 10px;
-    background: #E6E6E6; }
+    background: transparent; }
     .search_gifs img:active {
       background: #F7C9F3;
       color: #110038;

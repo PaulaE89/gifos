@@ -125,7 +125,7 @@
 
 .create_video {
   margin: 78px 378px 153px 378px;
-  display: block;
+  display: none;
   /* estilo videos 1 cuadro este primero hay q borrar porque es general*/
   /*primer cuadro
   */
@@ -357,6 +357,8 @@
       border-left: 0; }
     .create_video .square:last-child {
       border-right: 0; }
+  .create_video .change_color {
+    background: #F7C9F3; }
   .create_video .play_image {
     width: 6px;
     height: 10px;

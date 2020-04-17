@@ -192,7 +192,7 @@
 
 .create_video {
     margin: 78px 378px 153px 378px;
-    display: block;
+    display: none;
 
     img {
         display: flex;
@@ -553,6 +553,13 @@
 
             border-right: 0;
         }
+    }
+
+
+    .change_color{
+
+
+        background: #F7C9F3;
     }
 
     .play_image {
